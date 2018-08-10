@@ -579,7 +579,16 @@ EDIT_DEVICE_NETWORK_CONFIGURATION=id:s2id_netDataUsgSelect
 
 EDIT_DEVICE_APP_CONFIGURATION=id:s2id_appConfSelect
 
+DEVICE_ASSIGN_OWNER_BTN=id:deviceDetails-chngeUserModal-link-create
 
+
+DEVICE_ASSIGN_OWNER_SEARCH_LBL=xpath:.//input[@type='search']
+
+DEVICE_ASSIGN_OWNER_CLICK=xpath:.//table[@id='DataTables_Table_0']/tbody
+
+DEVICE_ASSIGN_GROUP_BTN=xpath:.//div[@id='s2id_deviceDetails-deviceGroup-drpdwn']
+
+DEVICE_ASSIGN_GROUP_DRPDWN=xpath:.//ul[@id='select2-results-5']/li
 
 
 
