@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21366" started-at="2018-08-09T07:00:18Z" finished-at="2018-08-09T07:00:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21366" started-at="2018-08-09T07:00:18Z" finished-at="2018-08-09T07:00:39Z">
+      <class name="seqrite.mdm.test.DevicesTest">
+        <test-method status="PASS" signature="loading_configurations()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="loading_configurations" is-config="true" duration-ms="63" started-at="2018-08-09T07:00:18Z" finished-at="2018-08-09T07:00:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loading_configurations -->
+        <test-method status="PASS" signature="LaunchApp()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="LaunchApp" is-config="true" duration-ms="7180" started-at="2018-08-09T07:00:18Z" finished-at="2018-08-09T07:00:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApp -->
+        <test-method status="PASS" signature="verify_device_list_enroll_with_ADO()[pri:6, instance:seqrite.mdm.test.DevicesTest@13805618]" name="verify_device_list_enroll_with_ADO" duration-ms="13436" started-at="2018-08-09T07:00:25Z" finished-at="2018-08-09T07:00:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_device_list_enroll_with_ADO -->
+        <test-method status="PASS" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="CloseApp" is-config="true" duration-ms="625" started-at="2018-08-09T07:00:38Z" finished-at="2018-08-09T07:00:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_device_list_enroll_with_ADO status=SUCCESS method=DevicesTest.verify_device_list_enroll_with_ADO()[pri:6, instance:seqrite.mdm.test.DevicesTest@13805618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+        <test-method status="PASS" signature="end_of_test_suit()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="end_of_test_suit" is-config="true" duration-ms="0" started-at="2018-08-09T07:00:39Z" finished-at="2018-08-09T07:00:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end_of_test_suit -->
+      </class> <!-- seqrite.mdm.test.DevicesTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

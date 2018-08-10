@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BVT_Suite" >
+
+
+  <test thread-count="1" name="UserTest" parallel="none">
+    <classes>    
+     <class name="seqrite.mdm.test.UserTest"/>         
+   </classes>
+  </test> <!-- UserTest -->
+  
+  
+  <test thread-count="1" name="DevicesTest" parallel="none">
+    <classes>    
+     <class name="seqrite.mdm.test.DevicesTest"/>      
+   </classes>
+  </test> <!-- DevicesTest -->
+  
+  
+  <test thread-count="1" name="PoliciesTest" parallel="none">
+    <classes>    
+     <class name="seqrite.mdm.test.PoliciesTest"/>     
+   </classes>
+  </test> <!-- PoliciesTest -->
+  
+  
+  <test thread-count="1" name="ScheduleScanTest" parallel="none">
+    <classes>    
+     <class name="seqrite.mdm.test.ScheduleScanTest"/>       
+   </classes>
+  </test> <!-- ScheduleScanTest -->
+  
+  <test thread-count="1" name="AntitheftTest" parallel="none">
+    <classes>    
+      <class name="seqrite.mdm.test.AntitheftTest"/>      
+   </classes>
+  </test> <!-- AntitheftTest -->
+  
+  <test thread-count="1" name="NetworkconfigTest" parallel="none">
+    <classes>    
+    <class name="seqrite.mdm.test.NetworkconfigTest"/>        
+   </classes>
+  </test> <!-- NetworkconfigTest -->
+  
+  <test thread-count="1" name="WebSecurityTest" parallel="none">
+    <classes>    
+    <class name="seqrite.mdm.test.WebSecurityTest"/>           
+   </classes>
+  </test> <!-- WebSecurityTest -->
+  
+  <test thread-count="1" name="AppConfigurationTest" parallel="none">
+    <classes>    
+        <class name="seqrite.mdm.test.AppConfigurationTest"/>       
+   </classes>
+  </test> <!-- AppConfigurationTest -->
+  
+   <test thread-count="1" name="FenceTest" parallel="none">
+    <classes>    
+       <class name="seqrite.mdm.test.FenceTest"/>       
+   </classes>
+  </test> <!-- FenceTest -->
+  
+  
+  
+  
+  
+ 
+</suite> <!-- BVT_Suite -->

@@ -1,0 +1,33 @@
+11:43:34 ---------------------------------------------------------- 
+11:43:34 Test Suit Name: Default Suit 
+11:43:34 ---------------------------------------------------------- 
+11:43:34 Providing Log4j configuration settings 
+11:43:34 Initializing Application Setup 
+11:43:34 Loading Chrome Driver 
+11:43:34 Chrome Browser Loaded, Initializing Chrome Browser 
+11:43:42 Chrome Browser Launch Successfully 
+11:43:44 Application URL Found 	https://10.10.26.14:8443/# 
+11:43:46 ========================================== 
+11:43:46 TEST_CASE_START: verify_check_Enroll_New_Device_via_overview 
+11:43:46 ========================================== 
+11:43:46 Retrieving object LOGIN_USERNAME type 'id' & value 'unWrap' from OR 
+11:43:47 LOGIN_USERNAME Element is found 
+11:43:47 Retrieving object LOGIN_PASSWORD type 'id' & value 'pwdBkr' from OR 
+11:43:47 LOGIN_PASSWORD Element is found 
+11:43:47 Retrieving object LOGIN_BUTTON type 'xpath' & value './/*[@id='signInForm']/div/div/div[8]/div/button' from OR 
+11:43:47 LOGIN_BUTTON Element is found 
+11:43:50 Retrieving object MANAGE_TAB type 'linktext' & value 'Manage' from OR 
+11:43:50 MANAGE_TAB Element is found 
+11:43:51 Retrieving object USERS_TAB type 'linktext' & value 'Users' from OR 
+11:43:51 USERS_TAB Element is found 
+11:43:52 Retrieving object SEARCH_BOX_LIST_PAGE type 'xpath' & value '//div[@class='col-md-8 padding-none']/input' from OR 
+11:43:52 SEARCH_BOX_LIST_PAGE Element is found 
+11:43:53 Retrieving object USER_LIST_EDIT_BUTTON type 'xpath' & value '//tr[@class='odd selectable']/td[7]/div/a[1]' from OR 
+11:43:54 USER_LIST_EDIT_BUTTON Element is found 
+11:43:59 Retrieving object USER_ENROLLED_DEVICES_TAB type 'xpath' & value './/li[@id='userDetails_enrolledDevices_li']/a' from OR 
+11:43:59 USER_ENROLLED_DEVICES_TAB Element is found 
+11:44:01 Retrieving object USER_ENROLL_NEW_DEVICE_BUTTON type 'xpath' & value '//button[@id='userDetails_enrollNewDevice']' from OR 
+11:44:01 USER_ENROLL_NEW_DEVICE_BUTTON Element is found 
+11:44:04 Retrieving object USER_ADD_DEVICE_NAME_FIELD type 'xpath' & value '//input[@id='devicename']' from OR 
+11:44:04 USER_ADD_DEVICE_NAME_FIELD Element is found 
+11:44:06 Retrieving object USER_ADD_DEVICE_GROUP_DRPDWN type 'xpath' & value '//span[@id='select2-chosen-7']' from OR 

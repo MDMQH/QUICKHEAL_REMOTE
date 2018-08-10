@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [BVT_Suite]">
+  <test thread-count="5" name="UserTest(failed)">
+    <classes>
+      <class name="seqrite.mdm.test.UserTest">
+        <methods>
+          <include name="LaunchApp"/>
+          <include name="CloseApp"/>
+          <include name="verify_Add_New_User"/>
+          <include name="end_of_test_suit"/>
+          <include name="loading_configurations"/>
+        </methods>
+      </class> <!-- seqrite.mdm.test.UserTest -->
+    </classes>
+  </test> <!-- UserTest(failed) -->
+  <test thread-count="5" name="PoliciesTest(failed)">
+    <classes>
+      <class name="seqrite.mdm.test.PoliciesTest">
+        <methods>
+          <include name="apply_policy"/>
+          <include name="LaunchApp"/>
+          <include name="CloseApp"/>
+          <include name="verify_create_policy"/>
+          <include name="end_of_test_suit"/>
+          <include name="loading_configurations"/>
+        </methods>
+      </class> <!-- seqrite.mdm.test.PoliciesTest -->
+    </classes>
+  </test> <!-- PoliciesTest(failed) -->
+  <test thread-count="5" name="ScheduleScanTest(failed)">
+    <classes>
+      <class name="seqrite.mdm.test.ScheduleScanTest">
+        <methods>
+          <include name="LaunchApp"/>
+          <include name="CloseApp"/>
+          <include name="verify_add_ScheduleScan"/>
+          <include name="end_of_test_suit"/>
+          <include name="loading_configurations"/>
+        </methods>
+      </class> <!-- seqrite.mdm.test.ScheduleScanTest -->
+    </classes>
+  </test> <!-- ScheduleScanTest(failed) -->
+  <test thread-count="5" name="NetworkconfigTest(failed)">
+    <classes>
+      <class name="seqrite.mdm.test.NetworkconfigTest">
+        <methods>
+          <include name="LaunchApp"/>
+          <include name="CloseApp"/>
+          <include name="verify_apply_Networkconfig"/>
+          <include name="end_of_test_suit"/>
+          <include name="loading_configurations"/>
+          <include name="verify_Create_Networkconfig"/>
+        </methods>
+      </class> <!-- seqrite.mdm.test.NetworkconfigTest -->
+    </classes>
+  </test> <!-- NetworkconfigTest(failed) -->
+  <test thread-count="5" name="AppConfigurationTest(failed)">
+    <classes>
+      <class name="seqrite.mdm.test.AppConfigurationTest">
+        <methods>
+          <include name="verify_Add_App_Configuration"/>
+          <include name="LaunchApp"/>
+          <include name="CloseApp"/>
+          <include name="end_of_test_suit"/>
+          <include name="loading_configurations"/>
+        </methods>
+      </class> <!-- seqrite.mdm.test.AppConfigurationTest -->
+    </classes>
+  </test> <!-- AppConfigurationTest(failed) -->
+  <test thread-count="5" name="FenceTest(failed)">
+    <classes>
+      <class name="seqrite.mdm.test.FenceTest">
+        <methods>
+          <include name="LaunchApp"/>
+          <include name="CloseApp"/>
+          <include name="verify_create_Geo_fence"/>
+          <include name="end_of_test_suit"/>
+          <include name="loading_configurations"/>
+        </methods>
+      </class> <!-- seqrite.mdm.test.FenceTest -->
+    </classes>
+  </test> <!-- FenceTest(failed) -->
+</suite> <!-- Failed suite [BVT_Suite] -->

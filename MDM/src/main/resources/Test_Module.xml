@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MDM Sanity" parallel="false" verbose="1">
+	<test name="SEQRITE MDM SMOKE TEST">
+		<classes>
+			<class name="seqrite.mdm.test.DashboardTest" />
+		</classes>
+	</test>
+</suite>
