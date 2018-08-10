@@ -71,7 +71,6 @@ public class AppConfiguration {
 		Thread.sleep(2000);
 		return "ok";
 	}
-	
 //=================================================================================================================================================================	
 	public static String delete_App_Configuration() throws Exception{
 		MDM.login();
