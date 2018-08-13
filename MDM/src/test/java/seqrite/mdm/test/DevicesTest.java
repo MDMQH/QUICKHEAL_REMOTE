@@ -56,16 +56,14 @@ public class DevicesTest extends Setup {
 
 	//@Test(priority = 3)
 	public static void verify_synccommand_on_device() throws Throwable {
-		
 		Result = Devices.verify_Synccommand_on_device();
 		Assert.assertEquals(Result, "ok");
 	}
 	//====================================================================================================
 	
-//	//@Test(priority=4)
-//	public static void verify_device_details() throws Throwable {
-//		
-//		Result= Devices.device_details_success();
+//	//  @Test(priority=4)
+//	    public static void verify_device_details() throws Throwable {
+//	    Result= Devices.device_details_success();
 //		Assert.assertEquals(Result, "ok");
 	
 //}
@@ -90,7 +88,7 @@ public class DevicesTest extends Setup {
 
 	//===================================================================================================
 		
-		@Test(priority=6)
+		//@Test(priority=6)
 		public static void verify_device_list_enroll_with_ADO() throws Throwable {
 	    Result= Devices.device_list_enroll_with_ADO();
 		Assert.assertEquals(Result, "ok");	
@@ -117,8 +115,7 @@ public class DevicesTest extends Setup {
 		 *  This test case verifies by editing Device Details as Name, group,owner
 		 */
 		//@Test(priority=7)
-		public static void verify_edit_device_details() throws Exception {
-			
+		   public static void verify_edit_device_details() throws Exception {
 			Result= Devices.check_edit_device_details();
 			Assert.assertEquals(Result, "ok");
 		}
@@ -130,7 +127,7 @@ public class DevicesTest extends Setup {
 			 * @throws Throwable 
 
 			 */
-			@Test(priority=8)
+			//@Test(priority=8)
 			public static void verify_assign_Configuration_device() throws Throwable {
 				
 				Result= Devices.check_assign_Configuration_device();
@@ -138,9 +135,34 @@ public class DevicesTest extends Setup {
 			}
 		
 		
-		
+		//====================================================================================================
 			
-		
-	
+			//@Test(priority=9)
+			public static void verify_check_app_inventory_app_block()throws Throwable{
+			Result=Devices.check_app_inventory_app_block();
+			Assert.assertEquals(Result, "ok");
+				
+				}
+			
+       //====================================================================================================
+			
+			//@Test(priority=10)
+			public static void verify_check_app_inventory_app_whitelist()throws Throwable{
+			Result=Devices.check_app_inventory_app_whitelist();
+			Assert.assertEquals(Result, "ok");
+				
+				}
+	//==========================================================================================================
+			@Test(priority=11)
+			public static void verify_check_app_inventory_app_uninstall()throws Throwable{
+			Result=Devices.check_app_inventory_app_uninstall();
+			Assert.assertEquals(Result, "ok");
+				
+				}
+			
+			
+			
+			
+			
 	
 	}

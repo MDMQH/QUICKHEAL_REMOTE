@@ -556,9 +556,92 @@ try {
       		}
       		return "ok";
       	}
-        
-          
-          
-	
+      
+      	
+  //=========================================================================================================
+      	public static String check_app_inventory_app_block() throws Throwable {
+      		MDM.login();
+  			Thread.sleep(2000);
+  			Log.info("User Login Successfully");
+  			MDM.gotoDevices();
+  			MDM.searchOnListPage("One plus three");
+  			Thread.sleep(1000);
+  			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+  			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_SEARCH_BOX").sendKeys("ES File Explorer");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_SEARCH_CHKBOX").click();
+  			OR.is_element_present("DEVICE_APP_WITH_SELECTED_DRPDWN").click();
+  			OR.selectValueFromDropdown("DEVICE_APP_WITH_SELECTED_DRPDWN_VALUES", "Block");
+  			OR.is_element_present("DEVICE_APP_SUBMIT_BUTTON").click();
+  			Thread.sleep(1000);
+  			String success_notifi=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+  			System.out.println(success_notifi);
+  			Assert.assertEquals(success_notifi,"App Full Block command sent successfully.");
+      		Log.info("Success message displayed and verified");
+      		Log.info("The app full block command sent successfully");
+      		return "ok";
+      	}
+      	
+      	 //=========================================================================================================
+      	public static String check_app_inventory_app_whitelist() throws Throwable {
+      		MDM.login();
+  			Thread.sleep(2000);
+  			Log.info("User Login Successfully");
+  			MDM.gotoDevices();
+  			MDM.searchOnListPage("One plus three");
+  			Thread.sleep(1000);
+  			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+  			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_SEARCH_BOX").sendKeys("ES File Explorer");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_SEARCH_CHKBOX").click();
+  			OR.is_element_present("DEVICE_APP_WITH_SELECTED_DRPDWN").click();
+  			OR.selectValueFromDropdown("DEVICE_APP_WITH_SELECTED_DRPDWN_VALUES", "Whitelist");
+  			OR.is_element_present("DEVICE_APP_SUBMIT_BUTTON").click();
+  			Thread.sleep(1000);
+  			String success_notifi=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+  			System.out.println(success_notifi);
+  			Assert.assertEquals(success_notifi,"App Whitelist command sent successfully.");
+      		Log.info("Success message displayed and verified");
+      		Log.info("The app whitelist command sent successfully");
+      		return "ok";
+      	}   
+      	
+      	 //=========================================================================================================
+      	public static String check_app_inventory_app_uninstall() throws Throwable {
+      		MDM.login();
+  			Thread.sleep(2000);
+  			Log.info("User Login Successfully");
+  			MDM.gotoDevices();
+  			MDM.searchOnListPage("One plus three");
+  			Thread.sleep(1000);
+  			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+  			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_SEARCH_BOX").sendKeys("ES File Explorer");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_SEARCH_CHKBOX").click();
+  			OR.is_element_present("DEVICE_APP_WITH_SELECTED_DRPDWN").click();
+  			OR.selectValueFromDropdown("DEVICE_APP_WITH_SELECTED_DRPDWN_VALUES", "Uninstall");
+  			OR.is_element_present("DEVICE_APP_SUBMIT_BUTTON").click();
+  			Thread.sleep(1000);
+  			String success_notifi=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+  			System.out.println(success_notifi);
+  			Assert.assertEquals(success_notifi,"App Uninstall command sent successfully.");
+      		Log.info("Success message displayed and verified");
+      		Log.info("The app Uninstall command sent successfully");
+      		return "ok";
+      	} 	
+      	
+      	
 	
 }

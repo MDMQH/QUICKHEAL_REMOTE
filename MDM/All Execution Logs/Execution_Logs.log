@@ -1,33 +1,61 @@
-11:43:34 ---------------------------------------------------------- 
-11:43:34 Test Suit Name: Default Suit 
-11:43:34 ---------------------------------------------------------- 
-11:43:34 Providing Log4j configuration settings 
-11:43:34 Initializing Application Setup 
-11:43:34 Loading Chrome Driver 
-11:43:34 Chrome Browser Loaded, Initializing Chrome Browser 
-11:43:42 Chrome Browser Launch Successfully 
-11:43:44 Application URL Found 	https://10.10.26.14:8443/# 
-11:43:46 ========================================== 
-11:43:46 TEST_CASE_START: verify_check_Enroll_New_Device_via_overview 
-11:43:46 ========================================== 
-11:43:46 Retrieving object LOGIN_USERNAME type 'id' & value 'unWrap' from OR 
-11:43:47 LOGIN_USERNAME Element is found 
-11:43:47 Retrieving object LOGIN_PASSWORD type 'id' & value 'pwdBkr' from OR 
-11:43:47 LOGIN_PASSWORD Element is found 
-11:43:47 Retrieving object LOGIN_BUTTON type 'xpath' & value './/*[@id='signInForm']/div/div/div[8]/div/button' from OR 
-11:43:47 LOGIN_BUTTON Element is found 
-11:43:50 Retrieving object MANAGE_TAB type 'linktext' & value 'Manage' from OR 
-11:43:50 MANAGE_TAB Element is found 
-11:43:51 Retrieving object USERS_TAB type 'linktext' & value 'Users' from OR 
-11:43:51 USERS_TAB Element is found 
-11:43:52 Retrieving object SEARCH_BOX_LIST_PAGE type 'xpath' & value '//div[@class='col-md-8 padding-none']/input' from OR 
-11:43:52 SEARCH_BOX_LIST_PAGE Element is found 
-11:43:53 Retrieving object USER_LIST_EDIT_BUTTON type 'xpath' & value '//tr[@class='odd selectable']/td[7]/div/a[1]' from OR 
-11:43:54 USER_LIST_EDIT_BUTTON Element is found 
-11:43:59 Retrieving object USER_ENROLLED_DEVICES_TAB type 'xpath' & value './/li[@id='userDetails_enrolledDevices_li']/a' from OR 
-11:43:59 USER_ENROLLED_DEVICES_TAB Element is found 
-11:44:01 Retrieving object USER_ENROLL_NEW_DEVICE_BUTTON type 'xpath' & value '//button[@id='userDetails_enrollNewDevice']' from OR 
-11:44:01 USER_ENROLL_NEW_DEVICE_BUTTON Element is found 
-11:44:04 Retrieving object USER_ADD_DEVICE_NAME_FIELD type 'xpath' & value '//input[@id='devicename']' from OR 
-11:44:04 USER_ADD_DEVICE_NAME_FIELD Element is found 
-11:44:06 Retrieving object USER_ADD_DEVICE_GROUP_DRPDWN type 'xpath' & value '//span[@id='select2-chosen-7']' from OR 
+12:35:26 ---------------------------------------------------------- 
+12:35:26 Test Suit Name: Default Suit 
+12:35:26 ---------------------------------------------------------- 
+12:35:26 Providing Log4j configuration settings 
+12:35:26 Initializing Application Setup 
+12:35:26 Loading Chrome Driver 
+12:35:26 Chrome Browser Loaded, Initializing Chrome Browser 
+12:35:31 Chrome Browser Launch Successfully 
+12:35:32 Application URL Found 	https://10.10.26.14:8443/# 
+12:35:34 ========================================== 
+12:35:34 TEST_CASE_START: verify_check_app_inventory_app_uninstall 
+12:35:34 ========================================== 
+12:35:34 Retrieving object LOGIN_USERNAME type 'id' & value 'unWrap' from OR 
+12:35:34 LOGIN_USERNAME Element is found 
+12:35:34 Retrieving object LOGIN_PASSWORD type 'id' & value 'pwdBkr' from OR 
+12:35:34 LOGIN_PASSWORD Element is found 
+12:35:34 Retrieving object LOGIN_BUTTON type 'xpath' & value './/*[@id='signInForm']/div/div/div[8]/div/button' from OR 
+12:35:34 LOGIN_BUTTON Element is found 
+12:35:38 User Login Successfully 
+12:35:38 Retrieving object MANAGE_TAB type 'linktext' & value 'Manage' from OR 
+12:35:38 MANAGE_TAB Element is found 
+12:35:38 Retrieving object DEVICES_TAB type 'linktext' & value 'Devices' from OR 
+12:35:39 DEVICES_TAB Element is found 
+12:35:40 Retrieving object SEARCH_BOX_LIST_PAGE type 'xpath' & value '//div[@class='col-md-8 padding-none']/input' from OR 
+12:35:40 SEARCH_BOX_LIST_PAGE Element is found 
+12:35:42 Retrieving object EDIT_BUTTON_ON_LIST_PAGE type 'xpath' & value '//i[@class='fa fa-pencil actionIcon']' from OR 
+12:35:42 EDIT_BUTTON_ON_LIST_PAGE Element is found 
+12:35:45 Clicked EDIT_BUTTON_ON_LIST_PAGE  
+12:35:46 Retrieving object DEVICE_APP_INVENTORY_TAB type 'xpath' & value '//ul[@id='tabs']/li[4]' from OR 
+12:35:46 DEVICE_APP_INVENTORY_TAB Element is found 
+12:35:47 Retrieving object DEVICE_APP_SEARCH_BOX type 'xpath' & value '//input[@type='search']' from OR 
+12:35:47 DEVICE_APP_SEARCH_BOX Element is found 
+12:35:49 Retrieving object DEVICE_APP_SEARCH_CHKBOX type 'xpath' & value '//tr[@class='gradeA selectable odd']/td/div' from OR 
+12:35:49 DEVICE_APP_SEARCH_CHKBOX Element is found 
+12:35:49 Retrieving object DEVICE_APP_WITH_SELECTED_DRPDWN type 'xpath' & value '//button[@title='Please select']' from OR 
+12:35:50 DEVICE_APP_WITH_SELECTED_DRPDWN Element is found 
+12:35:50 Dropdown Value to select isUninstall 
+12:35:50 Retrieving object DEVICE_APP_WITH_SELECTED_DRPDWN_VALUES type 'xpath' & value '//ul[@class='dropdown-menu inner selectpicker']/li' from OR 
+12:35:50 Number of Values in dropdown list is: 4 
+12:35:50 Values from dropdown is:  
+12:35:50 Values from dropdown is: Whitelist 
+12:35:50 Values from dropdown is: Block 
+12:35:50 Clicked On Dropdown ElementUninstall 
+12:35:50 Values from dropdown is: Uninstall 
+12:35:50 Retrieving object DEVICE_APP_SUBMIT_BUTTON type 'xpath' & value '//button[@id='device-app-action-submit-btn']' from OR 
+12:35:50 DEVICE_APP_SUBMIT_BUTTON Element is found 
+12:35:51 Retrieving object DEVICE_APP_SUCCESS_NOTFICATION type 'xpath' & value '//span[@class='notyfy_text']' from OR 
+12:35:51 DEVICE_APP_SUCCESS_NOTFICATION Element is found 
+12:35:51 Success message displayed and verified 
+12:35:51 The app Uninstall command sent successfully 
+12:35:51 ========================================== 
+12:35:51 RESULT: TEST_CASE_PASS verify_check_app_inventory_app_uninstall 
+12:35:51 ========================================== 
+12:35:51 END_OF_TEST_CASE: verify_check_app_inventory_app_uninstall 
+12:35:51 ========================================== 
+12:35:51 Closing Application 
+12:35:52 searching for batch file ......... 
+12:35:52 C:\Users\test\git\QUICKHEAL_REMOTE\MDM\MDM_Sanity_Test_Report.bat 
+12:35:52 Batch Executed Successfully .......... 
+12:35:52 I am in after suite, Batch file executed successfully 
+12:35:52 END OF:Default suite 

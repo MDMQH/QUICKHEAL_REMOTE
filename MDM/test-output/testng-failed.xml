@@ -9,7 +9,7 @@
           <include name="CloseApp"/>
           <include name="end_of_test_suit"/>
           <include name="loading_configurations"/>
-          <include name="verify_device_list_enroll_via_sms"/>
+          <include name="verify_check_app_inventory_app_uninstall"/>
         </methods>
       </class> <!-- seqrite.mdm.test.DevicesTest -->
     </classes>

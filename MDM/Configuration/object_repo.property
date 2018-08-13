@@ -1,5 +1,5 @@
 # OBJECT_REPOSITORY
-# @AUTHOR     :SIDDHANT RAUT
+# @AUTHOR     :SIDDHANT RAUT, Rajat Goyal,Lavina Jain,Onkar Naik
 # APPLICATION :SEQRITE MDM
 # TYPE GLOBAL
 
@@ -591,11 +591,21 @@ DEVICE_ASSIGN_GROUP_BTN=xpath:.//div[@id='s2id_deviceDetails-deviceGroup-drpdwn'
 DEVICE_ASSIGN_GROUP_DRPDWN=xpath:.//ul[@id='select2-results-5']/li
 
 
+DEVICE_APP_INVENTORY_TAB=xpath://ul[@id='tabs']/li[4]
 
+DEVICE_APP_SEARCH_BOX=xpath://input[@type='search']
 
+##DEVICE_APP_SEARCH_CHKBOX=xpath://div[@id="uniform-undefined"]/span/input
 
+DEVICE_APP_SEARCH_CHKBOX=xpath://tr[@class='gradeA selectable odd']/td/div
 
+DEVICE_APP_WITH_SELECTED_DRPDWN=xpath://button[@title='Please select']
 
+DEVICE_APP_WITH_SELECTED_DRPDWN_VALUES=xpath://ul[@class='dropdown-menu inner selectpicker']/li
+
+DEVICE_APP_SUBMIT_BUTTON=xpath://button[@id='device-app-action-submit-btn']
+
+DEVICE_APP_SUCCESS_NOTFICATION=xpath://span[@class='notyfy_text']
 
 
 
