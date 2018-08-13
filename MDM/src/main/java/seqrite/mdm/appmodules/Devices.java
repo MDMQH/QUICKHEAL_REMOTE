@@ -642,6 +642,57 @@ try {
       		return "ok";
       	} 	
       	
-      	
-	
+  //==============================================================================================================
+      	public static String check_add_app() throws Throwable {
+      		MDM.login();
+  			Thread.sleep(2000);
+  			Log.info("User Login Successfully");
+  			MDM.gotoDevices();
+  			MDM.searchOnListPage("One plus three");
+  			Thread.sleep(1000);
+  			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+  			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_ADD_APP_BUTTON").click();
+  			OR.selectValueFromDropdown("DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES", "From Google Play");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_ADD_APP_URL_BOX").sendKeys(Constants.RainCan_APP_URL);
+            OR.is_element_present("DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON").click();
+            String notification_text=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+            System.out.println(notification_text);
+            if(notification_text.equals(Constants.APP_PRESENCE_NOTIFICATION_STRING)) {
+
+            	MDM.DeleteAlreadyAddedApp("raincan");
+            	Thread.sleep(2000);
+            	MDM.gotoDevices();
+      			MDM.searchOnListPage("One plus three");
+      			Thread.sleep(1000);
+      			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+      			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_ADD_APP_BUTTON").click();
+      			OR.selectValueFromDropdown("DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES", "From Google Play");
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_ADD_APP_URL_BOX").sendKeys(Constants.RainCan_APP_URL);
+                OR.is_element_present("DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON").click();
+                notification_text=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+                System.out.println(notification_text);
+                Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
+            	Log.info("App added suuccessfully to the repository"); 
+                
+            }else
+            {
+            	Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
+            	Log.info("App added suuccessfully to the repository");
+            	
+            }
+            
+            
+            
+      		return "ok";
+      	}
 }

@@ -1,61 +1,90 @@
-12:35:26 ---------------------------------------------------------- 
-12:35:26 Test Suit Name: Default Suit 
-12:35:26 ---------------------------------------------------------- 
-12:35:26 Providing Log4j configuration settings 
-12:35:26 Initializing Application Setup 
-12:35:26 Loading Chrome Driver 
-12:35:26 Chrome Browser Loaded, Initializing Chrome Browser 
-12:35:31 Chrome Browser Launch Successfully 
-12:35:32 Application URL Found 	https://10.10.26.14:8443/# 
-12:35:34 ========================================== 
-12:35:34 TEST_CASE_START: verify_check_app_inventory_app_uninstall 
-12:35:34 ========================================== 
-12:35:34 Retrieving object LOGIN_USERNAME type 'id' & value 'unWrap' from OR 
-12:35:34 LOGIN_USERNAME Element is found 
-12:35:34 Retrieving object LOGIN_PASSWORD type 'id' & value 'pwdBkr' from OR 
-12:35:34 LOGIN_PASSWORD Element is found 
-12:35:34 Retrieving object LOGIN_BUTTON type 'xpath' & value './/*[@id='signInForm']/div/div/div[8]/div/button' from OR 
-12:35:34 LOGIN_BUTTON Element is found 
-12:35:38 User Login Successfully 
-12:35:38 Retrieving object MANAGE_TAB type 'linktext' & value 'Manage' from OR 
-12:35:38 MANAGE_TAB Element is found 
-12:35:38 Retrieving object DEVICES_TAB type 'linktext' & value 'Devices' from OR 
-12:35:39 DEVICES_TAB Element is found 
-12:35:40 Retrieving object SEARCH_BOX_LIST_PAGE type 'xpath' & value '//div[@class='col-md-8 padding-none']/input' from OR 
-12:35:40 SEARCH_BOX_LIST_PAGE Element is found 
-12:35:42 Retrieving object EDIT_BUTTON_ON_LIST_PAGE type 'xpath' & value '//i[@class='fa fa-pencil actionIcon']' from OR 
-12:35:42 EDIT_BUTTON_ON_LIST_PAGE Element is found 
-12:35:45 Clicked EDIT_BUTTON_ON_LIST_PAGE  
-12:35:46 Retrieving object DEVICE_APP_INVENTORY_TAB type 'xpath' & value '//ul[@id='tabs']/li[4]' from OR 
-12:35:46 DEVICE_APP_INVENTORY_TAB Element is found 
-12:35:47 Retrieving object DEVICE_APP_SEARCH_BOX type 'xpath' & value '//input[@type='search']' from OR 
-12:35:47 DEVICE_APP_SEARCH_BOX Element is found 
-12:35:49 Retrieving object DEVICE_APP_SEARCH_CHKBOX type 'xpath' & value '//tr[@class='gradeA selectable odd']/td/div' from OR 
-12:35:49 DEVICE_APP_SEARCH_CHKBOX Element is found 
-12:35:49 Retrieving object DEVICE_APP_WITH_SELECTED_DRPDWN type 'xpath' & value '//button[@title='Please select']' from OR 
-12:35:50 DEVICE_APP_WITH_SELECTED_DRPDWN Element is found 
-12:35:50 Dropdown Value to select isUninstall 
-12:35:50 Retrieving object DEVICE_APP_WITH_SELECTED_DRPDWN_VALUES type 'xpath' & value '//ul[@class='dropdown-menu inner selectpicker']/li' from OR 
-12:35:50 Number of Values in dropdown list is: 4 
-12:35:50 Values from dropdown is:  
-12:35:50 Values from dropdown is: Whitelist 
-12:35:50 Values from dropdown is: Block 
-12:35:50 Clicked On Dropdown ElementUninstall 
-12:35:50 Values from dropdown is: Uninstall 
-12:35:50 Retrieving object DEVICE_APP_SUBMIT_BUTTON type 'xpath' & value '//button[@id='device-app-action-submit-btn']' from OR 
-12:35:50 DEVICE_APP_SUBMIT_BUTTON Element is found 
-12:35:51 Retrieving object DEVICE_APP_SUCCESS_NOTFICATION type 'xpath' & value '//span[@class='notyfy_text']' from OR 
-12:35:51 DEVICE_APP_SUCCESS_NOTFICATION Element is found 
-12:35:51 Success message displayed and verified 
-12:35:51 The app Uninstall command sent successfully 
-12:35:51 ========================================== 
-12:35:51 RESULT: TEST_CASE_PASS verify_check_app_inventory_app_uninstall 
-12:35:51 ========================================== 
-12:35:51 END_OF_TEST_CASE: verify_check_app_inventory_app_uninstall 
-12:35:51 ========================================== 
-12:35:51 Closing Application 
-12:35:52 searching for batch file ......... 
-12:35:52 C:\Users\test\git\QUICKHEAL_REMOTE\MDM\MDM_Sanity_Test_Report.bat 
-12:35:52 Batch Executed Successfully .......... 
-12:35:52 I am in after suite, Batch file executed successfully 
-12:35:52 END OF:Default suite 
+18:10:10 ---------------------------------------------------------- 
+18:10:10 Test Suit Name: Default Suit 
+18:10:10 ---------------------------------------------------------- 
+18:10:10 Providing Log4j configuration settings 
+18:10:10 Initializing Application Setup 
+18:10:10 Loading Chrome Driver 
+18:10:10 Chrome Browser Loaded, Initializing Chrome Browser 
+18:10:14 Chrome Browser Launch Successfully 
+18:10:15 Application URL Found 	https://10.10.26.14:8443/# 
+18:10:17 ========================================== 
+18:10:17 TEST_CASE_START: verify_check_add_app 
+18:10:17 ========================================== 
+18:10:17 Retrieving object LOGIN_USERNAME type 'id' & value 'unWrap' from OR 
+18:10:17 LOGIN_USERNAME Element is found 
+18:10:17 Retrieving object LOGIN_PASSWORD type 'id' & value 'pwdBkr' from OR 
+18:10:17 LOGIN_PASSWORD Element is found 
+18:10:17 Retrieving object LOGIN_BUTTON type 'xpath' & value './/*[@id='signInForm']/div/div/div[8]/div/button' from OR 
+18:10:17 LOGIN_BUTTON Element is found 
+18:10:23 User Login Successfully 
+18:10:23 Retrieving object MANAGE_TAB type 'linktext' & value 'Manage' from OR 
+18:10:23 MANAGE_TAB Element is found 
+18:10:23 Retrieving object DEVICES_TAB type 'linktext' & value 'Devices' from OR 
+18:10:24 DEVICES_TAB Element is found 
+18:10:25 Retrieving object SEARCH_BOX_LIST_PAGE type 'xpath' & value '//div[@class='col-md-8 padding-none']/input' from OR 
+18:10:26 SEARCH_BOX_LIST_PAGE Element is found 
+18:10:27 Retrieving object EDIT_BUTTON_ON_LIST_PAGE type 'xpath' & value '//i[@class='fa fa-pencil actionIcon']' from OR 
+18:10:27 EDIT_BUTTON_ON_LIST_PAGE Element is found 
+18:10:29 Clicked EDIT_BUTTON_ON_LIST_PAGE  
+18:10:30 Retrieving object DEVICE_APP_INVENTORY_TAB type 'xpath' & value '//ul[@id='tabs']/li[4]' from OR 
+18:10:30 DEVICE_APP_INVENTORY_TAB Element is found 
+18:10:31 Retrieving object DEVICE_ADD_APP_BUTTON type 'xpath' & value '//div[@id='add-app-button']/a' from OR 
+18:10:31 DEVICE_ADD_APP_BUTTON Element is found 
+18:10:31 Dropdown Value to select isFrom Google Play 
+18:10:31 Retrieving object DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES type 'xpath' & value '//div[@id='add-app-button']/ul/li' from OR 
+18:10:31 Number of Values in dropdown list is: 4 
+18:10:31 Clicked On Dropdown ElementFrom Google Play 
+18:10:31 Values from dropdown is: From Google Play 
+18:10:32 Retrieving object DEVICE_ADD_APP_URL_BOX type 'xpath' & value '//input[@id='play-store-form-app-path']' from OR 
+18:10:32 DEVICE_ADD_APP_URL_BOX Element is found 
+18:10:33 Retrieving object DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON type 'xpath' & value '//button[@id='play-store-save-btn']' from OR 
+18:10:33 DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON Element is found 
+18:10:33 Retrieving object DEVICE_APP_SUCCESS_NOTFICATION type 'xpath' & value '//span[@class='notyfy_text']' from OR 
+18:10:36 DEVICE_APP_SUCCESS_NOTFICATION Element is found 
+18:10:36 Retrieving object APPS_TAB type 'linktext' & value 'Apps' from OR 
+18:10:36 APPS_TAB Element is found 
+18:10:37 Retrieving object REPOSITORY_TAB type 'linktext' & value 'Repository' from OR 
+18:10:37 REPOSITORY_TAB Element is found 
+18:10:38 Retrieving object APP_REPOSITORY_SEARCH_APP_BOX type 'xpath' & value '//input[@class='form-control' and @type='search']' from OR 
+18:10:38 APP_REPOSITORY_SEARCH_APP_BOX Element is found 
+18:10:40 Retrieving object APP_REPOSITORY_DELETE_BUTTON type 'xpath' & value '//a[@class='remove_2 app-repo-delete-btn']' from OR 
+18:10:40 APP_REPOSITORY_DELETE_BUTTON Element is found 
+18:10:41 Retrieving object APP_REPOSITORY_DELETE_CONFIRMATION type 'xpath' & value '//button[@class='btn btn-primary' and @data-bb-handler='confirm']' from OR 
+18:10:41 APP_REPOSITORY_DELETE_CONFIRMATION Element is found 
+18:10:42 App Deleted Successfully 
+18:10:44 Retrieving object MANAGE_TAB type 'linktext' & value 'Manage' from OR 
+18:10:44 MANAGE_TAB Element is found 
+18:10:44 Retrieving object DEVICES_TAB type 'linktext' & value 'Devices' from OR 
+18:10:45 DEVICES_TAB Element is found 
+18:10:45 Retrieving object SEARCH_BOX_LIST_PAGE type 'xpath' & value '//div[@class='col-md-8 padding-none']/input' from OR 
+18:10:46 SEARCH_BOX_LIST_PAGE Element is found 
+18:10:47 Retrieving object EDIT_BUTTON_ON_LIST_PAGE type 'xpath' & value '//i[@class='fa fa-pencil actionIcon']' from OR 
+18:10:47 EDIT_BUTTON_ON_LIST_PAGE Element is found 
+18:10:48 Clicked EDIT_BUTTON_ON_LIST_PAGE  
+18:10:49 Retrieving object DEVICE_APP_INVENTORY_TAB type 'xpath' & value '//ul[@id='tabs']/li[4]' from OR 
+18:10:50 DEVICE_APP_INVENTORY_TAB Element is found 
+18:10:51 Retrieving object DEVICE_ADD_APP_BUTTON type 'xpath' & value '//div[@id='add-app-button']/a' from OR 
+18:10:51 DEVICE_ADD_APP_BUTTON Element is found 
+18:10:51 Dropdown Value to select isFrom Google Play 
+18:10:51 Retrieving object DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES type 'xpath' & value '//div[@id='add-app-button']/ul/li' from OR 
+18:10:51 Number of Values in dropdown list is: 4 
+18:10:51 Clicked On Dropdown ElementFrom Google Play 
+18:10:51 Values from dropdown is: From Google Play 
+18:10:52 Retrieving object DEVICE_ADD_APP_URL_BOX type 'xpath' & value '//input[@id='play-store-form-app-path']' from OR 
+18:10:52 DEVICE_ADD_APP_URL_BOX Element is found 
+18:10:53 Retrieving object DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON type 'xpath' & value '//button[@id='play-store-save-btn']' from OR 
+18:10:53 DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON Element is found 
+18:10:53 Retrieving object DEVICE_APP_SUCCESS_NOTFICATION type 'xpath' & value '//span[@class='notyfy_text']' from OR 
+18:10:54 DEVICE_APP_SUCCESS_NOTFICATION Element is found 
+18:10:54 App added suuccessfully to the repository 
+18:10:54 ========================================== 
+18:10:54 RESULT: TEST_CASE_PASS verify_check_add_app 
+18:10:54 ========================================== 
+18:10:54 END_OF_TEST_CASE: verify_check_add_app 
+18:10:54 ========================================== 
+18:10:54 Closing Application 
+18:10:55 searching for batch file ......... 
+18:10:55 C:\Users\test\git\QUICKHEAL_REMOTE\MDM\MDM_Sanity_Test_Report.bat 
+18:10:55 Batch Executed Successfully .......... 
+18:10:55 I am in after suite, Batch file executed successfully 
+18:10:55 END OF:Default suite 

@@ -55,5 +55,11 @@ public class Constants {
 	public static String Test_Data_Sheet_Fence = "Fences";
 	
 	public static String Test_Data_Sheet_Device= "Devices";
+	
+	public static String RainCan_APP_URL="https://play.google.com/store/apps/details?id=com.raincan.android.hybrid";
+	
+	public static String APP_PRESENCE_NOTIFICATION_STRING="6542 : App is already present in repository.";
+	
+	public static String APP_ADDED_TO_REPOSITRORY_NOTIFICATION="App is successfully published on device.";
 			
 }

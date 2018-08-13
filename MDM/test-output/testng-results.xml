@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25712" started-at="2018-08-13T07:05:26Z" finished-at="2018-08-13T07:05:52Z">
+  <suite name="Default suite" duration-ms="44385" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25712" started-at="2018-08-13T07:05:26Z" finished-at="2018-08-13T07:05:52Z">
+    <test name="Default test" duration-ms="44385" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:54Z">
       <class name="seqrite.mdm.test.DevicesTest">
-        <test-method status="PASS" signature="loading_configurations()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="loading_configurations" is-config="true" duration-ms="62" started-at="2018-08-13T07:05:26Z" finished-at="2018-08-13T07:05:26Z">
+        <test-method status="PASS" signature="loading_configurations()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="loading_configurations" is-config="true" duration-ms="63" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loading_configurations -->
-        <test-method status="PASS" signature="LaunchApp()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="LaunchApp" is-config="true" duration-ms="7176" started-at="2018-08-13T07:05:26Z" finished-at="2018-08-13T07:05:34Z">
+        <test-method status="PASS" signature="LaunchApp()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="LaunchApp" is-config="true" duration-ms="6616" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApp -->
-        <test-method status="PASS" signature="verify_check_app_inventory_app_uninstall()[pri:11, instance:seqrite.mdm.test.DevicesTest@13805618]" name="verify_check_app_inventory_app_uninstall" duration-ms="17739" started-at="2018-08-13T07:05:34Z" finished-at="2018-08-13T07:05:51Z">
+        <test-method status="PASS" signature="verify_check_add_app()[pri:12, instance:seqrite.mdm.test.DevicesTest@13805618]" name="verify_check_add_app" duration-ms="36997" started-at="2018-08-13T12:40:17Z" finished-at="2018-08-13T12:40:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_check_app_inventory_app_uninstall -->
-        <test-method status="PASS" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="CloseApp" is-config="true" duration-ms="657" started-at="2018-08-13T07:05:51Z" finished-at="2018-08-13T07:05:52Z">
+        </test-method> <!-- verify_check_add_app -->
+        <test-method status="PASS" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="CloseApp" is-config="true" duration-ms="641" started-at="2018-08-13T12:40:54Z" finished-at="2018-08-13T12:40:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verify_check_app_inventory_app_uninstall status=SUCCESS method=DevicesTest.verify_check_app_inventory_app_uninstall()[pri:11, instance:seqrite.mdm.test.DevicesTest@13805618] output={null}]]]>
+                <![CDATA[[TestResult name=verify_check_add_app status=SUCCESS method=DevicesTest.verify_check_add_app()[pri:12, instance:seqrite.mdm.test.DevicesTest@13805618] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseApp -->
-        <test-method status="PASS" signature="end_of_test_suit()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="end_of_test_suit" is-config="true" duration-ms="0" started-at="2018-08-13T07:05:52Z" finished-at="2018-08-13T07:05:52Z">
+        <test-method status="PASS" signature="end_of_test_suit()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="end_of_test_suit" is-config="true" duration-ms="2" started-at="2018-08-13T12:40:55Z" finished-at="2018-08-13T12:40:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end_of_test_suit -->

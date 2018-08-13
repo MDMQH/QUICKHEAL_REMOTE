@@ -607,6 +607,15 @@ DEVICE_APP_SUBMIT_BUTTON=xpath://button[@id='device-app-action-submit-btn']
 
 DEVICE_APP_SUCCESS_NOTFICATION=xpath://span[@class='notyfy_text']
 
+DEVICE_ADD_APP_BUTTON=xpath://div[@id='add-app-button']/a
+
+DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES=xpath://div[@id='add-app-button']/ul/li
+
+DEVICE_ADD_APP_URL_BOX=xpath://input[@id='play-store-form-app-path']
+
+DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON=xpath://button[@id='play-store-save-btn']
+
+
 
 
 
@@ -1428,9 +1437,11 @@ APP_CONFIGURATION_SELECT=xpath:.//td[contains(text(),'Automation App Configurati
 
 //span[@class='filter-option pull-left']
 
+APP_REPOSITORY_SEARCH_APP_BOX=xpath://input[@class='form-control' and @type='search']
 
+APP_REPOSITORY_DELETE_BUTTON=xpath://a[@class='remove_2 app-repo-delete-btn']
 
-
+APP_REPOSITORY_DELETE_CONFIRMATION=xpath://button[@class='btn btn-primary' and @data-bb-handler='confirm']
 
 
 

@@ -153,14 +153,20 @@ public class DevicesTest extends Setup {
 				
 				}
 	//==========================================================================================================
-			@Test(priority=11)
+			//@Test(priority=11)
 			public static void verify_check_app_inventory_app_uninstall()throws Throwable{
 			Result=Devices.check_app_inventory_app_uninstall();
 			Assert.assertEquals(Result, "ok");
 				
 				}
 			
-			
+	//==========================================================================================================
+			@Test(priority=12)
+			public static void verify_check_add_app()throws Throwable{
+			Result=Devices.check_add_app();
+			Assert.assertEquals(Result, "ok");
+				
+				}		
 			
 			
 			

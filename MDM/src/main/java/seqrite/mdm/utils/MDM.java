@@ -274,5 +274,19 @@ public class MDM  {
 			OR.is_element_present("COMMON_CONFIGURATION_CONFIRMATION_OK_BUTTON").click();
 		}
 		
+//=======================================Delete Already added app===================================================
+		
+		public static void DeleteAlreadyAddedApp(String appName) throws Exception{
+		    
+			MDM.gotoAppRepository();
+			OR.is_element_present("APP_REPOSITORY_SEARCH_APP_BOX").sendKeys(appName);
+			Thread.sleep(2000);
+			OR.is_element_present("APP_REPOSITORY_DELETE_BUTTON").click();
+			Thread.sleep(1000);
+			OR.is_element_present("APP_REPOSITORY_DELETE_CONFIRMATION").click();
+			Log.info("App Deleted Successfully");		
+		}
+		
+		
 		
 }
