@@ -3,8 +3,10 @@
  */
 package seqrite.mdm.appmodules;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
@@ -19,7 +21,7 @@ import seqrite.mdm.utils.Setup;
 /**
  * @author Siddhant.Raut
  */
-
+//public class Devices extends StartMDMClientApp
 public class Devices  extends Setup{
 	
 	static ORReader OR = new ORReader();
@@ -555,11 +557,414 @@ try {
       			
       		} catch (Throwable t) {
       			t.printStackTrace();
-      			// Log.info("No Success");
+      			Log.info("No Success");
       		}
       		return "ok";
       	}
-      
+     // =======================================================================================================================================
+    	/**
+    	 * @author Lavina Jain This method verifies the Simple Search for app On
+    	 *         Device App Inventory tab
+    	 * 
+    	 */
+    	public static String check_simple_search_app() throws Exception {
+    		try {
+    			String DeviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,
+    					Constants.Test_Data_Sheet_Device);
+
+    			String AppInventorySearch = ExcelUtils.get_excel_value("AppInventorySearch", Constants.Test_Data_Excel_File,
+    					Constants.Test_Data_Sheet_Device);
+
+    			Log.info("DeviceName From Excel are: " + DeviceName);
+    			Log.info("AppInventorySearch From Excel are: " + AppInventorySearch);
+
+    			MDM.login();
+    			Thread.sleep(2000);
+    			MDM.gotoDevices();
+
+    			Thread.sleep(2000);
+    			OR.is_element_present("DEVICE_LIST_SEARCH_BOX").sendKeys(DeviceName);
+    			Thread.sleep(1000);
+    			OR.is_element_present("DEVICE_LIST_EDIT_PENCIL").click();
+    			Log.info("DEVICE_LIST_EDIT_PENCIL clicked");
+    			Thread.sleep(2000);
+
+    			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+    			Thread.sleep(1000);
+    			Log.info("DEVICE_APP_INVENTORY_TAB clicked");
+    			MDM.searchOnListPage(AppInventorySearch);
+    			Thread.sleep(1000);
+
+    			String s1 = OR.is_element_present("DEVICE_APP_INVENTORY_SEARCH_LBL").getText();
+    			Log.info("Text for searched app is:" + s1);
+    			Assert.assertEquals(s1, "ES File Explorer");
+    			Log.info("App searched successfully");
+
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+
+    		return "ok";
+    	}  
+    	
+    	// =======================================================================================================================================
+    	/**
+    	 * @author Lavina Jain This method verifies the advanced Search for app On
+    	 *         Device App Inventory tab
+    	 * 
+    	 */
+    	public static String check_advance_search_app() throws Exception {
+    		try {
+    			String DeviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,
+    					Constants.Test_Data_Sheet_Device);
+
+    			String AppInventorySearch = ExcelUtils.get_excel_value("AppInventorySearch", Constants.Test_Data_Excel_File,
+    					Constants.Test_Data_Sheet_Device);
+
+    			Log.info("DeviceName From Excel are: " + DeviceName);
+    			Log.info("AppInventorySearch From Excel are: " + AppInventorySearch);
+
+    			MDM.login();
+    			Thread.sleep(2000);
+    			MDM.gotoDevices();
+
+    			Thread.sleep(2000);
+    			OR.is_element_present("DEVICE_LIST_SEARCH_BOX").sendKeys(DeviceName);
+    			Thread.sleep(1000);
+    			OR.is_element_present("DEVICE_LIST_EDIT_PENCIL").click();
+    			Log.info("DEVICE_LIST_EDIT_PENCIL clicked");
+    			Thread.sleep(2000);
+
+    			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+    			Thread.sleep(1000);
+    			Log.info("DEVICE_APP_INVENTORY_TAB clicked");
+    			OR.is_element_present("DEVICE_APP_INVENTORY_ADVANCE_SEARCH_BTN").click();
+    			Thread.sleep(1000);
+    			Log.info("DEVICE_APP_INVENTORY_ADVANCE_SEARCH_BTN clicked");
+
+    			OR.is_element_present("SELECT_APP_TYPE_DROPDOWN_BTN").click();
+    			Thread.sleep(2000);
+    			Log.info("SELECT_APP_TYPE_DROPDOWN_BTN clicked");
+    			OR.selectValueFromDropdown("SELECT_APP_COMMON_DROPDOWN_LIST", "Downloaded");
+    			Thread.sleep(2000);
+    			Log.info("SELECT_APP_COMMON_DROPDOWN_LIST as Downloaded from DROPDOWN");
+
+    			OR.is_element_present("SELECT_APP_STATUS_DROPDOWN_BTN").click();
+    			Thread.sleep(2000);
+    			Log.info("SELECT_APP_STATUS_DROPDOWN_BTN clicked");
+    			OR.selectValueFromDropdown("SELECT_APP_COMMON_DROPDOWN_LIST", "Installed");
+    			Thread.sleep(2000);
+    			Log.info("SELECT_APP_COMMON_DROPDOWN_LIST as Installed from DROPDOWN");
+
+    			OR.is_element_present("SELECT_APP_CATEGORY_DROPDOWN_BTN").click();
+    			Thread.sleep(2000);
+    			Log.info("SELECT_APP_CATEGORY_DROPDOWN_BTN clicked");
+    			OR.selectValueFromDropdown("SELECT_APP_COMMON_DROPDOWN_LIST", "Social");
+    			Thread.sleep(2000);
+    			Log.info("SELECT_APP_COMMON_DROPDOWN_LIST as Social from DROPDOWN");
+
+    			OR.is_element_present("DEVICE_ADVANCED_SEARCH_BTN_APP_INVENTORY").click();
+    			Thread.sleep(2000);
+    			Log.info("DEVICE_ADVANCED_SEARCH_BTN_APP_INVENTORY clicked");
+    			// String entry =
+    			// OR.is_element_present("DEVICE_ADVANCED_SEARCH_LBL_ENTRY").getText();
+    			// System.out.println("entry is"+entry);
+    			// Log.info("Verifying no of entries of searched app ");
+    			// Assert.assertEquals(entry, "Showing 1 to 1 of 1 entries");
+
+    			Boolean b = OR.is_element_present("DEVICE_ADVANCED_SEARCH_LBL_ENTRY").isDisplayed();
+    			System.out.println("Status of search is :" + b);
+    			Assert.assertTrue(b);
+    			Log.info("Verified advance_search_app");
+
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+
+    		return "ok";
+    	}
+
+   // =======================================================================================================================================
+    	/**
+    	 * @author Lavina Jain This method verifies the Locate Command and verify it
+    	 *         status in Activity Tab.
+    	 * @throws Throwable
+    	 * 
+    	 */
+    	public static String check_device_location() throws Throwable {
+    		try {
+    			String DeviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,
+    					Constants.Test_Data_Sheet_Device);
+
+    			Log.info("DeviceName From Excel are: " + DeviceName);
+
+    			MDM.login();
+    			Thread.sleep(2000);
+    			MDM.gotoDevices();
+    			Thread.sleep(2000);
+    			OR.is_element_present("DEVICE_LIST_SEARCH_BOX").sendKeys(DeviceName);
+    			Thread.sleep(1000);
+    			OR.clickOnElement("EDIT_DEVICE_ON_LIST_PAGE");
+    			OR.clickOnElement("DEVICE_LOCATION_TAB");
+    			OR.clickOnElement("DEVICE_LOCATION_BTN");
+    			OR.clickOnElement("DEVICE_LOCATION_POPUP_BTN");
+    			Thread.sleep(20000);
+    			MDM.activitystatus();
+    			Log.info("Locate Command verified");
+
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+
+    		return "ok";
+    	}   	
+    	// =======================================================================================================================================
+    	/**
+    	 * @author Lavina Jain This method verifies the Trace On Command and verify it
+    	 *         status in Activity Tab.
+    	 * @throws Throwable
+    	 * 
+    	 */
+    	public static String check_device_trace_on() throws Throwable {
+    		try {
+    			String DeviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,
+    					Constants.Test_Data_Sheet_Device);
+
+    			Log.info("DeviceName From Excel are: " + DeviceName);
+
+    			MDM.login();
+    			Thread.sleep(2000);
+    			MDM.gotoDevices();
+    			Thread.sleep(2000);
+    			OR.is_element_present("DEVICE_LIST_SEARCH_BOX").sendKeys(DeviceName);
+    			Thread.sleep(1000);
+    			OR.clickOnElement("EDIT_DEVICE_ON_LIST_PAGE");
+    			OR.clickOnElement("DEVICE_LOCATION_TAB");
+    			Thread.sleep(5000);
+    			OR.clickOnElement("DEVICE_TRACE_BTN");
+    			Thread.sleep(2000);
+    			OR.clickOnElement("DEVICE_TRACE_CONFIGURE_POPUP");
+    			Thread.sleep(20000);
+    			MDM.activitystatus();
+    			Log.info("TRACE ON  Command verified");
+
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+
+    		return "ok";
+    	}
+    	
+   // =======================================================================================================================================
+    			/**
+    			 * @author Lavina Jain This method verifies Data Plan Details on Network Configuration Tab of Device
+    			 * @throws Throwable
+    			 * 
+    			 */
+    			public static String check_data_plan_details() throws Throwable {
+    				try {
+    					MDM.login();
+    					Thread.sleep(2000);
+    					MDM.gotoDevices();
+    					Thread.sleep(2000);
+    					String DeviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,
+    							Constants.Test_Data_Sheet_Network_Usage);
+    					Log.info("DeviceName From Excel are: " + DeviceName);
+    					OR.is_element_present("DEVICE_LIST_SEARCH_BOX").sendKeys(DeviceName);
+    					Thread.sleep(1000);
+    					OR.clickOnElement("EDIT_DEVICE_ON_LIST_PAGE");
+    					OR.clickOnElement("DEVICE_NETWORK_USAGE_TAB");
+    					Log.info("clicked DEVICE_NETWORK_USAGE_TAB");
+    					
+    					String Before_xpath="//div[@class='configurationsDetails']/div[" ;
+    					String after_xpath= "]";
+    					String key_xpath;
+    					String value_xpath;
+    					String[] keyResult1 = new String[20];
+    					String[] valueResult1 = new String[20];
+    					
+    					String keys;
+    					String values;
+    					
+    					
+    				for (int i = 1,k=0; i <= 12; i = i + 2,k++) {
+    					key_xpath = Before_xpath + i + after_xpath;
+    					keys = driver.findElement(By.xpath(key_xpath)).getText();
+    					//System.out.println(keys);
+    						keyResult1[k] = keys;
+    						System.out.println(keyResult1[k]);
+    						
+
+    				}
+    					Log.info("Total no. of Keys available on Device Network Usage Screen are: " + keyResult1.length);
+    				//	System.out.println(keyResult1);
+    					
+    					for (int i = 2,k=0; i <= 12; i = i + 2,k++) {
+    						value_xpath = Before_xpath + i + after_xpath;
+    						values = driver.findElement(By.xpath(value_xpath)).getText();
+    	//System.out.println(values);
+    				
+    							valueResult1[k] = values;
+    							System.out.println(valueResult1[k]);
+
+    					}
+    					
+    					Log.info("Total no. of Values available on Device Network Usage Screen are: " + valueResult1.length);
+    				//	System.out.println(valueResult1);
+    					
+    					
+    					Map<String, String> map1 = new HashMap<String, String>();
+    					for (int i = 0; i < keyResult1.length; i++) {
+    						map1.put(keyResult1[i], valueResult1[i]);
+    					}
+    					
+    					System.out.println(map1.size());
+    					Log.info("Extracting data from excel data sheet");
+    					
+    					
+    					
+    					String NetworkUsageConfiguration = ExcelUtils.get_excel_value("Network Usage Configuration", Constants.Test_Data_Excel_File,
+    							Constants.Test_Data_Sheet_Network_Usage);
+    					
+    					String BillingCycleStartDate = ExcelUtils.get_excel_value("Billing Cycle Start Date", Constants.Test_Data_Excel_File,
+    							Constants.Test_Data_Sheet_Network_Usage);
+    					
+    					String NumberofDays = ExcelUtils.get_excel_value("Number of Days", Constants.Test_Data_Excel_File,
+    							Constants.Test_Data_Sheet_Network_Usage);
+    					
+    					String MobileDataPlanLimit = ExcelUtils.get_excel_value("Mobile Data Plan Limit", Constants.Test_Data_Excel_File,
+    							Constants.Test_Data_Sheet_Network_Usage);
+    					
+    					Log.info("NetworkUsageConfiguration From Excel are: " + NetworkUsageConfiguration);
+    					Log.info("BillingCycleStartDate From Excel are: " + BillingCycleStartDate);
+    					Log.info("NumberofDays From Excel are: " + NumberofDays);
+    					Log.info("MobileDataPlanLimit From Excel are: " + MobileDataPlanLimit);
+    					
+    					
+    					Log.info("Comparing the test data with the data received from device Network Usage screen");
+    					Assert.assertEquals(map1.get("Network Usage Configuration"), NetworkUsageConfiguration);
+    					Assert.assertEquals(map1.get("Billing Cycle Start Date"), BillingCycleStartDate);
+    					Assert.assertEquals(map1.get("Number of Days"), NumberofDays);
+    					Assert.assertEquals(map1.get("Mobile Data Plan Limit"), MobileDataPlanLimit);
+    					Log.info("Successfully verified values from device Network Usage screen");
+
+    				}
+    					catch (Exception e) {
+    					e.printStackTrace();
+    				}
+
+    				return "ok";
+    			}
+    			
+    // =======================================================================================================================================
+    			/**
+    			 * @author Lavina Jain This method verifies Simple Search On Device list Page
+    			 * 
+    			 */
+    			public static String check_simple_search_device() throws Exception {
+    				try {
+    					String DeviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,
+    							Constants.Test_Data_Sheet_Device);
+
+
+    					Log.info("DeviceName From Excel are: " + DeviceName);
+
+    					MDM.login();
+    					Thread.sleep(2000);
+    					MDM.gotoDevices();
+
+    					Thread.sleep(2000);
+    					OR.is_element_present("DEVICE_LIST_SEARCH_BOX").sendKeys(DeviceName);
+    					Thread.sleep(1000);
+    					
+
+    					String res = OR.is_element_present("DEVICE_SEARCH_LBL").getText();
+    					Log.info("Text for searched app is:" + res);
+    					Assert.assertTrue(res.contains("Showing 1 to 1 of 1 entries"));
+    					
+    					
+//    					Boolean b = OR.is_element_present("DEVICE_SEARCH_LBL").isDisplayed();
+//    					System.out.println("Status of search is :" + b);
+//    					Assert.assertTrue(b);
+    					
+    					Log.info("Device searched successfully");
+
+    				} catch (Exception e) {
+    					e.printStackTrace();
+    				}
+
+    				return "ok";
+    			}  
+    			
+    			
+    			
+   // =======================================================================================================================================
+				/**
+				 * @author Lavina Jain This method verifies advanced Search On Device list Page
+				 * 
+				 */
+				public static String check_advance_search_device() throws Exception {
+					try {
+
+						MDM.login();
+						Thread.sleep(2000);
+						MDM.gotoDevices();
+
+						Thread.sleep(2000);
+						OR.is_element_present("USERS_ADVANCED_SEARCH_BTN").click();
+						Log.info("USERS_ADVANCED_SEARCH_BTN clicked");
+						Thread.sleep(2000);
+						
+						//String drpdwn_data=OR.is_element_present("DEVICE_ADVANCE_SEARCH_CRITERIA2").getText();
+						//System.out.println(drpdwn_data);
+							//if(drpdwn_data==null)
+							//{
+								OR.is_element_present("DEVICE_ADVANCE_SEARCH_CRITERIA2").click();
+								Thread.sleep(2000);
+								Log.info("DEVICE_ADVANCE_SEARCH_CRITERIA2 clicked");
+								OR.selectValueFromDropdown("SELECT_APP_COMMON_DROPDOWN_LIST", "Approved");
+								Thread.sleep(2000);
+								Log.info("SELECT_APP_COMMON_DROPDOWN_LIST as Approved from DROPDOWN");
+							//}
+						
+						
+						
+						OR.is_element_present("DEVICE_ADVANCE_SEARCH_CRITERIA1").click();
+						Thread.sleep(2000);
+						Log.info("DEVICE_ADVANCE_SEARCH_CRITERIA1 clicked");
+						OR.selectValueFromDropdown("SELECT_APP_COMMON_DROPDOWN_LIST", "Policy Non Compliant");
+						Thread.sleep(2000);
+						Log.info("SELECT_APP_COMMON_DROPDOWN_LIST as Policy Non Compliant from DROPDOWN");
+
+						
+
+						OR.is_element_present("DEVICE_ADVANCE_SEARCH_CRITERIA3").click();
+						Thread.sleep(2000);
+						Log.info("DEVICE_ADVANCE_SEARCH_CRITERIA3 clicked");
+						OR.selectValueFromDropdown("SELECT_APP_COMMON_DROPDOWN_LIST", "Default Group");
+						Thread.sleep(2000);
+						Log.info("SELECT_APP_COMMON_DROPDOWN_LIST as Automation Group from DROPDOWN");
+
+						OR.is_element_present("DEVICE_ADVANCED_SEARCH_BTN_AFTER_DRPDWN").click();
+						Thread.sleep(2000);
+						Log.info("DEVICE_ADVANCED_SEARCH_BTN_AFTER_DRPDWN clicked");
+						// String entry =
+						// OR.is_element_present("DEVICE_ADVANCED_SEARCH_LBL_ENTRY").getText();
+						// System.out.println("entry is"+entry);
+						// Log.info("Verifying no of entries of searched app ");
+						// Assert.assertEquals(entry, "Showing 1 to 1 of 1 entries");
+
+						Boolean b = OR.is_element_present("DEVICE_SEARCH_LBL").isDisplayed();
+						System.out.println("Status of search is :" + b);
+						Assert.assertTrue(b);
+						Log.info("Verified advance_search_app");
+
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+
+					return "ok";
+				} 
       	
   //=========================================================================================================
       	public static String check_app_inventory_app_block() throws Throwable {

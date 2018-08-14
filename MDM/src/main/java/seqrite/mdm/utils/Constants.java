@@ -78,5 +78,6 @@ public class Constants {
     
     public static String CUSTOM_APP_UPLOAD_FILE_APK_NAME="vidmate.apk";
 	
+    public static String Test_Data_Sheet_Network_Usage= "Nw Config";
 			
 }
