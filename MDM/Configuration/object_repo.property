@@ -1457,14 +1457,15 @@ APP_ADD_CUSTOM_APK_URL_FIELD=xpath://input[@id='custom-url-form-url']
 
 APP_ADD_PUBLISH_BUTTON=xpath://button[@id='custom-url-save-publish-btn']
 
-APP_ADD_CUSTOM_UPLOAD_PATH=xpath://div[@id='fileupload-fileName']/span
+APP_ADD_CUSTOM_UPLOAD_PATH=xpath://div[@id='fileupload-fileName']/span/span
 
 APP_ADD_CUSTOM_UPLOAD_PUBLISH_BUTTON=xpath://button[@id='up-publish-apk-btn']
 
+APP_ADD_REPOSITORY_SEARCH_BOX=xpath://div[@id='app-setting-launcher-control-id_filter']/div/input
 
+APP_ADD_REPOSITORY_CHKBOX=xpath://tr[@id='app-repo-set-row-1456']/td[1]
 
-
-
+APP_ADD_REPOSITORY_ADD_BUTTON=xpath://button[@id='add-from-app-repo-btn']
 
 
 

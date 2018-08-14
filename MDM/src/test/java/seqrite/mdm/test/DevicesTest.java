@@ -177,13 +177,19 @@ public class DevicesTest extends Setup {
 			}		
 	
   //==========================================================================================================
-			@Test(priority=14)
+			//@Test(priority=14)
 			public static void verify_check_add_app_custom_upload_apk()throws Throwable{
 			Result=Devices.check_add_app_custom_upload_apk();
 			Assert.assertEquals(Result, "ok");
 				
 			}			
 			
-			
+ //==========================================================================================================
+			@Test(priority=15)
+			public static void verify_check_add_app_repository()throws Throwable{
+			Result=Devices.check_add_app_repository();
+			Assert.assertEquals(Result, "ok");
+				
+			}					
 	
 	}

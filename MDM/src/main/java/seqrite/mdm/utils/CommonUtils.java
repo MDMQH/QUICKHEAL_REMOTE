@@ -127,7 +127,7 @@ public static void takeScreenShot(String methodName) throws InterruptedException
 	 */
 	public static void get_file_from_testdata(String File_Dir, String File_Name) throws Exception {
 
-		StringSelection ss = new StringSelection(Constants.Test_Data_Dir_Path + File_Dir + "\\" + File_Name);
+		StringSelection ss = new StringSelection(File_Dir + "\\" + File_Name);
 		Log.info(" Path of Test Data File is: " + ss);
 		
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);

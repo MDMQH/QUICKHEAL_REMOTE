@@ -74,9 +74,9 @@ public class Constants {
 	
     public static String CUSTOM_APP_ALREADY_ADDED_NOTIFICATION="9653 : App with same version code is already added in app repository.";
 	
-    public static String CUSTOM_APP_UPLOAD_PATH=System.getProperty("user.dir")+"\\TestData\\APKs\\";
+    public static String CUSTOM_APP_UPLOAD_PATH=System.getProperty("user.dir")+"\\TestData\\APKs";
     
-    public static String CUSTOM_APP_UPLOAD_FILE_APK_NAME="vidmet.apk";
+    public static String CUSTOM_APP_UPLOAD_FILE_APK_NAME="vidmate.apk";
 	
 			
 }
