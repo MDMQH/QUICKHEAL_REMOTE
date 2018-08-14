@@ -1445,6 +1445,21 @@ APP_REPOSITORY_DELETE_CONFIRMATION=xpath://button[@class='btn btn-primary' and @
 
 
 
+APP_ADD_CUSTOM_APP_NAME_FIELD=xpath://input[@id='custom-url-form-app-name']
+
+APP_ADD_CUSTOM_PACKAGE_NAME_FIELD=xpath://input[@id='custom-url-form-package-name']
+
+APP_ADD_CUSTOM_VERSION_NAME_FIELD=xpath://input[@id='appVersionName']
+
+APP_ADD_CUUSTOM_VERSION_CODE_FIELD=xpath://input[@id='appVersionCode']
+
+APP_ADD_CUSTOM_APK_URL_FIELD=xpath://input[@id='custom-url-form-url']
+
+APP_ADD_PUBLISH_BUTTON=xpath://button[@id='custom-url-save-publish-btn']
+
+APP_ADD_CUSTOM_UPLOAD_PATH=xpath://div[@id='fileupload-fileName']/span
+
+APP_ADD_CUSTOM_UPLOAD_PUBLISH_BUTTON=xpath://button[@id='up-publish-apk-btn']
 
 
 

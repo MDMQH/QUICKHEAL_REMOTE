@@ -61,5 +61,22 @@ public class Constants {
 	public static String APP_PRESENCE_NOTIFICATION_STRING="6542 : App is already present in repository.";
 	
 	public static String APP_ADDED_TO_REPOSITRORY_NOTIFICATION="App is successfully published on device.";
+	
+	public static String CUSTOM_APP_NAME="Vidmate";
+	
+	public static String CUSTOM_APP_PACKAGE_ID="com.nemo.vidmate";
+	
+	public static String CUSTOM_APP_VERSION_NAME="3.5102";
+	
+	public static String CUSTOM_APP_VERSION_CODE="35102";
+	
+	public static String CUSTOM_APP_APK_URL="https://vidmate.onl/download/";
+	
+    public static String CUSTOM_APP_ALREADY_ADDED_NOTIFICATION="9653 : App with same version code is already added in app repository.";
+	
+    public static String CUSTOM_APP_UPLOAD_PATH=System.getProperty("user.dir")+"\\TestData\\APKs\\";
+    
+    public static String CUSTOM_APP_UPLOAD_FILE_APK_NAME="vidmet.apk";
+	
 			
 }

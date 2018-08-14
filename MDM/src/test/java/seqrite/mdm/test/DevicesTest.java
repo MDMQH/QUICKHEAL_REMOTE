@@ -161,13 +161,28 @@ public class DevicesTest extends Setup {
 				}
 			
 	//==========================================================================================================
-			@Test(priority=12)
+			//@Test(priority=12)
 			public static void verify_check_add_app()throws Throwable{
 			Result=Devices.check_add_app();
 			Assert.assertEquals(Result, "ok");
 				
 				}		
-			
+	
+   //==========================================================================================================
+			//@Test(priority=13)
+			public static void verify_check_add_app_custom_url()throws Throwable{
+			Result=Devices.check_add_app_custom_url();
+			Assert.assertEquals(Result, "ok");
+				
+			}		
+	
+  //==========================================================================================================
+			@Test(priority=14)
+			public static void verify_check_add_app_custom_upload_apk()throws Throwable{
+			Result=Devices.check_add_app_custom_upload_apk();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
 			
 			
 	

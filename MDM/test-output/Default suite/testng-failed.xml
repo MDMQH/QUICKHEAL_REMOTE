@@ -7,9 +7,9 @@
         <methods>
           <include name="LaunchApp"/>
           <include name="CloseApp"/>
+          <include name="verify_check_add_app_custom_upload_apk"/>
           <include name="end_of_test_suit"/>
           <include name="loading_configurations"/>
-          <include name="verify_check_app_inventory_app_uninstall"/>
         </methods>
       </class> <!-- seqrite.mdm.test.DevicesTest -->
     </classes>

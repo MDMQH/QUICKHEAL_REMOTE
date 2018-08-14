@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 import seqrite.mdm.client.utils.StartMDMClientApp;
+import seqrite.mdm.utils.CommonUtils;
 import seqrite.mdm.utils.Constants;
 import seqrite.mdm.utils.ExcelUtils;
 import seqrite.mdm.utils.Log;
@@ -25,7 +26,7 @@ public class Devices  extends StartMDMClientApp{
 //=====================================================================================================================================================
 //	public static String add_device() throws Throwable {
 //		try {
-//			String deviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,Constants.Test_Data_Sheet_Device);
+			//String deviceName = ExcelUtils.get_excel_value("DeviceName", Constants.Test_Data_Excel_File,Constants.Test_Data_Sheet_Device);
 //			Log.info("TestData for Device Name from Excel is ==========>" + deviceName);
 //			MDM.login();
 //			Log.info("User Login Successfully");
@@ -688,11 +689,123 @@ try {
             {
             	Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
             	Log.info("App added suuccessfully to the repository");
-            	
             }
-            
-            
-            
       		return "ok";
       	}
+      	
+        //==============================================================================================================
+      	public static String check_add_app_custom_url() throws Throwable {
+      		MDM.login();
+  			Thread.sleep(2000);
+  			Log.info("User Login Successfully");
+  			MDM.gotoDevices();
+  			MDM.searchOnListPage("One plus three");
+  			Thread.sleep(1000);
+  			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+  			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_ADD_APP_BUTTON").click();
+  			OR.selectValueFromDropdown("DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES", "Custom App URL");
+  			Thread.sleep(1000);	
+  			OR.is_element_present("APP_ADD_CUSTOM_APP_NAME_FIELD").sendKeys(Constants.CUSTOM_APP_NAME);
+            OR.is_element_present("APP_ADD_CUSTOM_PACKAGE_NAME_FIELD").sendKeys(Constants.CUSTOM_APP_PACKAGE_ID);
+            OR.is_element_present("APP_ADD_CUSTOM_VERSION_NAME_FIELD").sendKeys(Constants.CUSTOM_APP_VERSION_NAME);
+            OR.is_element_present("APP_ADD_CUUSTOM_VERSION_CODE_FIELD").sendKeys(Constants.CUSTOM_APP_VERSION_CODE);
+            OR.is_element_present("APP_ADD_CUSTOM_APK_URL_FIELD").sendKeys(Constants.CUSTOM_APP_APK_URL);
+            OR.is_element_present("APP_ADD_PUBLISH_BUTTON").click(); 
+            
+            String notification_text=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+            System.out.println(notification_text);
+            if(notification_text.equals(Constants.CUSTOM_APP_ALREADY_ADDED_NOTIFICATION)) {
+
+            	MDM.DeleteAlreadyAddedApp(Constants.CUSTOM_APP_NAME);
+            	Thread.sleep(2000);
+            	MDM.gotoDevices();
+      			MDM.searchOnListPage("One plus three");
+      			Thread.sleep(1000);
+      			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+      			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_ADD_APP_BUTTON").click();
+      			OR.selectValueFromDropdown("DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES", "Custom App URL");
+      			Thread.sleep(1000);	
+      			OR.is_element_present("APP_ADD_CUSTOM_APP_NAME_FIELD").sendKeys(Constants.CUSTOM_APP_NAME);
+                OR.is_element_present("APP_ADD_CUSTOM_PACKAGE_NAME_FIELD").sendKeys(Constants.CUSTOM_APP_PACKAGE_ID);
+                OR.is_element_present("APP_ADD_CUSTOM_VERSION_NAME_FIELD").sendKeys(Constants.CUSTOM_APP_VERSION_NAME);
+                OR.is_element_present("APP_ADD_CUUSTOM_VERSION_CODE_FIELD").sendKeys(Constants.CUSTOM_APP_VERSION_CODE);
+                OR.is_element_present("APP_ADD_CUSTOM_APK_URL_FIELD").sendKeys(Constants.CUSTOM_APP_APK_URL);
+                OR.is_element_present("APP_ADD_PUBLISH_BUTTON").click();
+                Thread.sleep(1000);
+                notification_text=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+                System.out.println(notification_text);
+                Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
+            	Log.info("App added suuccessfully to the repository");
+            }else
+            {
+            	Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
+            	Log.info("App added suuccessfully to the repository");
+            }
+      		return "ok";
+      	}
+      	
+      
+      //==============================================================================================================
+      	public static String check_add_app_custom_upload_apk() throws Throwable {
+      		MDM.login();
+  			Thread.sleep(2000);
+  			Log.info("User Login Successfully");
+  			MDM.gotoDevices();
+  			MDM.searchOnListPage("One plus three");
+  			Thread.sleep(1000);
+  			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+  			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+  			Thread.sleep(1000);
+  			OR.is_element_present("DEVICE_ADD_APP_BUTTON").click();
+  			OR.selectValueFromDropdown("DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES", "Upload Custom APK");
+  			Thread.sleep(1000);	
+  			OR.is_element_present("APP_ADD_CUSTOM_UPLOAD_PATH").sendKeys(Constants.CUSTOM_APP_UPLOAD_PATH);
+            OR.is_element_present("APP_ADD_CUSTOM_UPLOAD_PUBLISH_BUTTON").click();         
+            String notification_text=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+            System.out.println(notification_text);
+            if(notification_text.equals(Constants.CUSTOM_APP_ALREADY_ADDED_NOTIFICATION)) {
+
+            	MDM.DeleteAlreadyAddedApp(Constants.CUSTOM_APP_NAME);
+            	Thread.sleep(2000);
+            	MDM.gotoDevices();
+      			MDM.searchOnListPage("One plus three");
+      			Thread.sleep(1000);
+      			OR.is_element_present("EDIT_BUTTON_ON_LIST_PAGE").click();
+      			Log.info("Clicked EDIT_BUTTON_ON_LIST_PAGE ");
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_APP_INVENTORY_TAB").click();
+      			Thread.sleep(1000);
+      			OR.is_element_present("DEVICE_ADD_APP_BUTTON").click();
+      			OR.selectValueFromDropdown("DEVICE_ADD_APPS_BUTTON_DRPDOWN_VALUES", "Upload Custom APK");
+      			Thread.sleep(1000);	
+      			OR.is_element_present("APP_ADD_CUSTOM_UPLOAD_PATH").click();
+      			Thread.sleep(2000);
+      			CommonUtils.get_file_from_testdata(Constants.CUSTOM_APP_UPLOAD_PATH, Constants.CUSTOM_APP_UPLOAD_FILE_APK_NAME);
+                OR.is_element_present("APP_ADD_CUSTOM_UPLOAD_PUBLISH_BUTTON").click();         
+                notification_text=OR.is_element_present("DEVICE_APP_SUCCESS_NOTFICATION").getText();
+                System.out.println(notification_text);
+                Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
+            	Log.info("App added suuccessfully to the repository");
+            }else
+            {
+            	Assert.assertEquals(notification_text,Constants.APP_ADDED_TO_REPOSITRORY_NOTIFICATION);
+            	Log.info("App added suuccessfully to the repository");
+            }
+      		return "ok";
+      	}   	
+      	
+      	
+      	
+      	
+      	
 }
