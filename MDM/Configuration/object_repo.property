@@ -1,5 +1,5 @@
 # OBJECT_REPOSITORY
-# @AUTHOR     :SIDDHANT RAUT, Rajat Goyal,Lavina Jain,Onkar Naik
+# @AUTHOR     :SIDDHANT RAUT, Rajat Goyal,Lavina Jain,Omkar Naik
 # APPLICATION :SEQRITE MDM
 # TYPE GLOBAL
 
@@ -539,6 +539,9 @@ DEVICE_ADO_ENRLMNT_SUCCESS_POPUP=xpath://div[@id='qrcode-ado-enablement-model']/
 EDIT_SAVE_DEVICE_BUTTON=id:deviceDetails-editDevice-btn
 
 EDIT_SAVE_DEVICE_CONF_BUTTON=id:confSaveApplyBtn
+#xpath:.//*[@id='confSaveApplyBtn' and type='submit']		
+linktext:Save & Apply
+EDIT_SAVE_DEVICE_CONF_BUTTON_2=xpath:.//*[@id='confSaveApplyBtn' and type='submit']ED
 
 #EDIT_DEVICE_ON_LIST_PAGE=xpath:.//*[@id='dt-device-list']/tbody/tr[1]/td[12]/div/a[1]/i
 EDIT_DEVICE_ON_LIST_PAGE=xpath:.//a[@href='/device/details?id=16']
@@ -559,14 +562,25 @@ DEVICES_STATUS_VALUE_LIST=xpath:.//div[@class='widget-body list deviceDetailsSec
 
 EDIT_DEVICE_CONFIGURATION_TAB=id:configuration_edit_li
 
+#EDIT_DEVICE_WIFI_CONFIGURATION_CLOSE_BTN=xpath:.//a[@class='select2-search-choice-close']		
+			
+EDIT_DEVICE_WIFI_CONFIGURATION_OUTSIDE=id:device_edit_li
+
+#Rajat
 EDIT_DEVICE_WIFI_CONFIGURATION=id:s2id_wifiConfSelect
 
+
+
 EDIT_DEVICE_WIFI_CONFIGURATION_DRPDWN=xpath:.//div[@id='select2-drop']/ul/li
-//div[@id='select2-drop']/ul/li
+#//div[@id='select2-drop']/ul/li
+#//div[@id='select2-drop']/ul/li//d
+#//ul[@class='select2-results']/li/div//u
+#//div[@id='s2id_wifiConfSelect']/ul/li
+
 
 
 EDIT_DEVICE_WEB_SECURITY_CONFIGURATION=id:s2id_webSecConfSelect
-
+#	type="submit"
 
 EDIT_DEVICE_ANTI_THEFT_CONFIGURATION=id:s2id_antitheftConfSelect
 
@@ -592,6 +606,31 @@ DEVICE_ASSIGN_GROUP_DRPDWN=xpath:.//ul[@id='select2-results-5']/li
 
 
 DEVICE_APP_INVENTORY_TAB=xpath://ul[@id='tabs']/li[4]
+#DEVICE_APP_INVENTORY_TAB=xpath:.//a[@href='#appInventoryTabContent']
+#DEVICE_APP_INVENTORY_TAB=xpath:.//a[@class='glyphicons show_thumbnails']
+DEVICE_APP_INVENTORY_SEARCH_LBL=xpath:.//td[@class='tdhover trimUpto25chars']	
+DEVICE_APP_INVENTORY_ADVANCE_SEARCH_BTN=id:advancedSearchLinkAppInventory
+SELECT_APP_TYPE_DROPDOWN_BTN=linktext:Select App Type
+SELECT_APP_COMMON_DROPDOWN_LIST=xpath:.//div[@id='select2-drop']/ul/li
+SELECT_APP_STATUS_DROPDOWN_BTN=linktext:Select App Status
+SELECT_APP_CATEGORY_DROPDOWN_BTN=linktext:Select Category
+DEVICE_ADVANCED_SEARCH_BTN_APP_INVENTORY=xpath:.//li[@id='resetLi']/button[1]
+DEVICE_ADVANCED_SEARCH_LBL_ENTRY=id:dt-appInventory-list_info
+DEVICE_OVERVIEW_TAB=xpath:.//a[@href='#overviewTabContent']
+DEVICE_LOCATION_POPUP_BTN=id:action-send-sms-submit-btn
+DEVICE_LOCATION_TAB=xpath:.//a[@class='glyphicons google_maps']
+DEVICE_LOCATION_BTN=id:locate_device_btn
+#DEVICE_TRACE_BTN=linktext:Trace
+DEVICE_TRACE_BTN=xpath:.//li[@class='col-md-6 padding10px']/div
+DEVICE_TRACE_CONFIGURE_POPUP=id:trace-on-action-msg-submit-btn
+DEVICE_NETWORK_USAGE_TAB=xpath:.//a[@href='#network_usage_tab_content']
+DEVICE_SEARCH_LBL=id:dt-device-list_info
+DEVICE_ADVANCE_SEARCH_CRITERIA1=linktext:Select Compliant Status
+#DEVICE_ADVANCE_SEARCH_CRITERIA2=linktext:Select Device Status 
+DEVICE_ADVANCE_SEARCH_CRITERIA2=xpath:.//span[@id='select2-chosen-3']
+DEVICE_ADVANCE_SEARCH_CRITERIA3=linktext:Select Group
+DEVICE_ADVANCED_SEARCH_BTN_AFTER_DRPDWN=id:advancedSearchBtn
+
 
 DEVICE_APP_SEARCH_BOX=xpath://input[@type='search']
 
