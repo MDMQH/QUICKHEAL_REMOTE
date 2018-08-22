@@ -1,36 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44385" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:54Z">
+  <suite name="Default suite" duration-ms="61597" started-at="2018-08-21T11:41:57Z" finished-at="2018-08-21T11:42:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44385" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:54Z">
+    <test name="Default test" duration-ms="61597" started-at="2018-08-21T11:41:57Z" finished-at="2018-08-21T11:42:58Z">
       <class name="seqrite.mdm.test.DevicesTest">
-        <test-method status="PASS" signature="loading_configurations()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="loading_configurations" is-config="true" duration-ms="63" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:10Z">
+        <test-method status="PASS" signature="loading_configurations()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="loading_configurations" is-config="true" duration-ms="65" started-at="2018-08-21T11:41:57Z" finished-at="2018-08-21T11:41:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loading_configurations -->
-        <test-method status="PASS" signature="LaunchApp()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="LaunchApp" is-config="true" duration-ms="6616" started-at="2018-08-13T12:40:10Z" finished-at="2018-08-13T12:40:17Z">
+        <test-method status="PASS" signature="LaunchApp()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="LaunchApp" is-config="true" duration-ms="7089" started-at="2018-08-21T11:41:57Z" finished-at="2018-08-21T11:42:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApp -->
-        <test-method status="PASS" signature="verify_check_add_app()[pri:12, instance:seqrite.mdm.test.DevicesTest@13805618]" name="verify_check_add_app" duration-ms="36997" started-at="2018-08-13T12:40:17Z" finished-at="2018-08-13T12:40:54Z">
+        <test-method status="PASS" signature="verify_check_device_action_enabling_call_sms()[pri:32, instance:seqrite.mdm.test.DevicesTest@13805618]" name="verify_check_device_action_enabling_call_sms" duration-ms="26298" started-at="2018-08-21T11:42:04Z" finished-at="2018-08-21T11:42:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_check_add_app -->
-        <test-method status="PASS" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="CloseApp" is-config="true" duration-ms="641" started-at="2018-08-13T12:40:54Z" finished-at="2018-08-13T12:40:54Z">
+        </test-method> <!-- verify_check_device_action_enabling_call_sms -->
+        <test-method status="PASS" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="CloseApp" is-config="true" duration-ms="670" started-at="2018-08-21T11:42:30Z" finished-at="2018-08-21T11:42:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verify_check_add_app status=SUCCESS method=DevicesTest.verify_check_add_app()[pri:12, instance:seqrite.mdm.test.DevicesTest@13805618] output={null}]]]>
+                <![CDATA[[TestResult name=verify_check_device_action_enabling_call_sms status=SUCCESS method=DevicesTest.verify_check_device_action_enabling_call_sms()[pri:32, instance:seqrite.mdm.test.DevicesTest@13805618] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseApp -->
-        <test-method status="PASS" signature="end_of_test_suit()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="end_of_test_suit" is-config="true" duration-ms="2" started-at="2018-08-13T12:40:55Z" finished-at="2018-08-13T12:40:55Z">
+        <test-method status="PASS" signature="LaunchApp()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="LaunchApp" is-config="true" duration-ms="6129" started-at="2018-08-21T11:42:31Z" finished-at="2018-08-21T11:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApp -->
+        <test-method status="PASS" signature="verify_check_search_command_policy_config_on_activity_tab()[pri:42, instance:seqrite.mdm.test.DevicesTest@13805618]" name="verify_check_search_command_policy_config_on_activity_tab" duration-ms="20618" started-at="2018-08-21T11:42:37Z" finished-at="2018-08-21T11:42:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_check_search_command_policy_config_on_activity_tab -->
+        <test-method status="PASS" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="CloseApp" is-config="true" duration-ms="664" started-at="2018-08-21T11:42:58Z" finished-at="2018-08-21T11:42:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_check_search_command_policy_config_on_activity_tab status=SUCCESS method=DevicesTest.verify_check_search_command_policy_config_on_activity_tab()[pri:42, instance:seqrite.mdm.test.DevicesTest@13805618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+        <test-method status="PASS" signature="end_of_test_suit()[pri:0, instance:seqrite.mdm.test.DevicesTest@13805618]" name="end_of_test_suit" is-config="true" duration-ms="2" started-at="2018-08-21T11:42:59Z" finished-at="2018-08-21T11:42:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end_of_test_suit -->

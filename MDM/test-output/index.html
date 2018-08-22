@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Windows\Temp\testng-eclipse--1746600838\testng-customsuite.xml</span>
+                    <span>C:\Windows\Temp\testng-eclipse-1420648405\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="seqrite.mdm.test.DevicesTest" hash-for-method="verify_check_add_app">verify_check_add_app</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="seqrite.mdm.test.DevicesTest" hash-for-method="verify_check_device_action_enabling_call_sms">verify_check_device_action_enabling_call_sms</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="seqrite.mdm.test.DevicesTest" hash-for-method="verify_check_search_command_policy_config_on_activity_tab">verify_check_search_command_policy_config_on_activity_tab</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,9 +130,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verify_check_add_app">
-                  </a> <!-- verify_check_add_app -->
-                  <span class="method-name">verify_check_add_app</span>
+                  <a name="verify_check_device_action_enabling_call_sms">
+                  </a> <!-- verify_check_device_action_enabling_call_sms -->
+                  <span class="method-name">verify_check_device_action_enabling_call_sms</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_check_search_command_policy_config_on_activity_tab">
+                  </a> <!-- verify_check_search_command_policy_config_on_activity_tab -->
+                  <span class="method-name">verify_check_search_command_policy_config_on_activity_tab</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +147,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Windows\Temp\testng-eclipse--1746600838\testng-customsuite.xml</span>
+            <span class="header-content">C:\Windows\Temp\testng-eclipse-1420648405\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,16 +196,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_check_add_app')
+data.setCell(0, 1, 'verify_check_device_action_enabling_call_sms')
 data.setCell(0, 2, 'seqrite.mdm.test.DevicesTest')
-data.setCell(0, 3, 36997);
+data.setCell(0, 3, 26298);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verify_check_search_command_policy_config_on_activity_tab')
+data.setCell(1, 2, 'seqrite.mdm.test.DevicesTest')
+data.setCell(1, 3, 20618);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -226,19 +242,31 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">LaunchApp</span>
-                <span class="method-start">187 ms</span>
+                <span class="method-start">190 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verify_check_add_app</span>
-                <span class="method-start">6803 ms</span>
+                <span class="method-name">verify_check_device_action_enabling_call_sms</span>
+                <span class="method-start">7279 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">CloseApp([TestResult name=verify_check_add_app status=SUCCESS method=DevicesTest.verify_check_add_app()[pri:1...)</span>
-                <span class="method-start">43804 ms</span>
+                <span class="method-name">CloseApp([TestResult name=verify_check_device_action_enabling_call_sms status=SUCCESS method=DevicesTest.veri...)</span>
+                <span class="method-start">33577 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">LaunchApp</span>
+                <span class="method-start">34251 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_check_search_command_policy_config_on_activity_tab</span>
+                <span class="method-start">40380 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">CloseApp([TestResult name=verify_check_search_command_policy_config_on_activity_tab status=SUCCESS method=Dev...)</span>
+                <span class="method-start">60998 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">end_of_test_suit</span>
-                <span class="method-start">44838 ms</span>
+                <span class="method-start">62132 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

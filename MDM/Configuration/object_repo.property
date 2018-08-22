@@ -544,7 +544,7 @@ linktext:Save & Apply
 EDIT_SAVE_DEVICE_CONF_BUTTON_2=xpath:.//*[@id='confSaveApplyBtn' and type='submit']ED
 
 #EDIT_DEVICE_ON_LIST_PAGE=xpath:.//*[@id='dt-device-list']/tbody/tr[1]/td[12]/div/a[1]/i
-EDIT_DEVICE_ON_LIST_PAGE=xpath:.//a[@href='/device/details?id=16']
+#EDIT_DEVICE_ON_LIST_PAGE=xpath:.//a[@href='/device/details?id=16']
 
 
 DEVICE_EDIT_PROFILE_PAGE=xpath://ul//li[2]//a[@class='glyphicons edit']
@@ -654,51 +654,87 @@ DEVICE_ADD_APP_URL_BOX=xpath://input[@id='play-store-form-app-path']
 
 DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON=xpath://button[@id='play-store-save-btn']
 
+#Rajat 16 Aug
 
+DEVICE_CALL_SMS_LOGS_TAB=xpath://ul[@id='tabs']/li[6]
 
+DEVICE_CALL_SMS_ON_OFF=xpath://div[@id='callsms-log-sync-div']
 
+DEVICE_ACTIVITY_STATUS_TAB=xpath://ul[@id='tabs']/li[8]
 
+DEVICE_ACTIVITY_TABLE_FIRST_ELEMENT_TEXT=xpath://*[@id="activityTable"]/tbody/tr[1]/td/div/span/span[2]/b
 
+DEVICE_ACTIVITY_ON_STATUS=xpath://span[@class='switch-left switch-small switch-success']
 
+DEVICE_ACTIVITY_OFF_STATUS=xpath://span[@class='switch-right switch-small switch-danger']
 
+DEVICE_SELECTION_CHKBOX=xpath://div[@id='uniform-undefined']
 
+DEVICE_WITH_SELECTED_DRPDWN=xpath://button[@data-id='device-action-drop-down']
 
+DEVICE_WITH_SELECTED_DRPDWN_VALUES=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_WITH_SELECTED_DEVICE_ACTION_DRPDWN=xpath://button[@data-id='device-basic-action-drop-down']	
 
+DEVICE_WITH_SELECTED_DEVICE_ACTION_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_SUBMIT_BUTTON=xpath://button[@id='device-action-submit-btn']
 
+DEVICE_SUBMIT_CONFIRMATION_OK_BUTTON=xpath://button[@data-bb-handler='confirm']
 
+DEVICE_SUBMIT_ACTION_SUCCESS_NOTIFICATION=xpath://div[@class='notyfy_message']/span
 
+DEVICE_LOCATE_SEND_SMS_CHKBOX=xpath://div[@id='uniform-sendSMScheckbox']
 
+DEVICE_LOCATE_SEND_SMS_CONFIRM_BUTTON=xpath://button[@id='action-send-sms-submit-btn']
 
+DEVICE_TRACE_FREQUENCY_DRPDWN=xpath://span[@id='select2-chosen-1']
 
+DEVICE_TRACE_FREQUENCY_DRPDOWN_VALUES=xpath://div[@id='select2-drop']/ul/li
 
+DEVICE_TRACE_FREQUENCY_CONFIRM_BUTTON=xpath://button[@id='trace-on-action-msg-submit-btn']
 
+DEVICE_BROADCAST_MESSAGE_AREA=xpath://textarea[@id='broadcastMessage']
 
+DEVICE_BROADCAST_MESSAGE_TYPE_DRPDWN=xpath://span[@id='select2-chosen-12']
 
+DEVICE_BROADCAST_MESSAGE_TYPE_DRPDWN_VALUE=xpath://div[@id='select2-drop']/ul/li
 
+DEVICE_BROADCAST_BUTTON=xpath://button[@id='broadcast-msg-submit-btn']
 
+DEVICE_MOVETO_GROUP_DRPDWN=xpath://button[@data-id='movetogroup-drop-down']
 
+DEVICE_MOVETO_GROUP_DRPDWN_VALUES=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLY_CONFIGURATION_DRPDWN=xpath://button[@data-id='apply-configuration-drop-down']
 
+DEVICE_APPLY_CONFIGURATION_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLYCONFIG_ANTITHEFT_DRPDWN=xpath://button[@data-id='selectConfiguration-drop-down']
 
+DEVICE_APPLYCONFIG_ANTITHEFT_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLYCONFIG_WEBSECURITY_DRPDWN=xpath://*[@id="selectConfiguration-drop-down-div"]/div/button
 
+DEVICE_APPLYCONFIG_WEBSECURITY_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLYCONFIG_WIFI_DRPDWN=xpath://*[@id="selectConfiguration-drop-down-div"]/div/button
 
+DEVICE_APPLYCONFIG_WIFI_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLYCONFIG_SCHDULE_SCAN_DRPDWN=xpath://*[@id="selectConfiguration-drop-down-div"]/div/button
 
+DEVICE_APPLYCONFIG_SCHDULE_SCAN_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLYCONFIG_APP_CONFIGURATION_DRPDWN=xpath://button[@data-id='selectConfiguration-drop-down']
 
+DEVICE_APPLYCONFIG_APP_CONFIGURATION_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
+DEVICE_APPLYCONFIG_NETWORK_USAGE_DRPDWN=xpath://label[@id="selectConfiguration-drop-down-div"]/div/button
 
+DEVICE_APPLYCONFIG_NETWORK_USAGE_DRPDWN_VALUE=xpath://div[@class='dropdown-menu open']/ul/li
 
-
-
-
-
-
+DEVICE_SEARCH_ACTIVITY_SEARCH_BOX=xpath://input[@class='form-control' and @aria-controls='activityTable']
 
 
 

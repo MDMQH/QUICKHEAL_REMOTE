@@ -209,7 +209,7 @@ public class DevicesTest extends Setup {
 
 			 * @throws Exception 
 			 */
-			@Test(priority=16)
+			//@Test(priority=16)
 			public static void verify_simple_search_device() throws Exception {
 				
 				Result= Devices.check_simple_search_device();
@@ -281,11 +281,162 @@ public class DevicesTest extends Setup {
 			}			
 			
  //==========================================================================================================
-			@Test(priority=24)
+			//@Test(priority=24)
 			public static void verify_check_add_app_repository()throws Throwable{
 			Result=Devices.check_add_app_repository();
 			Assert.assertEquals(Result, "ok");
 				
-			}					
+			}
+			
+			
+//==========================================================================================================
+			//@Test(priority=25)
+			public static void verify_check_enabling_call_sms()throws Throwable{
+			Result=Devices.check_enabling_call_sms();
+			Assert.assertEquals(Result, "ok");
+				
+			}		
+			
+//==========================================================================================================
+			//@Test(priority=26)
+			public static void verify_check_device_action_sync()throws Throwable{
+			Result=Devices.check_device_action_sync();
+			Assert.assertEquals(Result, "ok");
+				
+			}
+			
+			
+//==========================================================================================================
+			//@Test(priority=27)
+			public static void verify_check_device_action_locate()throws Throwable{
+			Result=Devices.check_device_action_locate();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+			
+//==========================================================================================================
+			//@Test(priority=28)
+			public static void verify_check_device_action_trace_on()throws Throwable{
+			Result=Devices.check_device_action_trace_on();
+			Assert.assertEquals(Result, "ok");
+				
+			}
+			
+//==========================================================================================================
+			//@Test(priority=29)
+			public static void verify_check_device_action_trace_off()throws Throwable{
+			Result=Devices.check_device_action_trace_off();
+			Assert.assertEquals(Result, "ok");
+				
+			}				
+			
+//==========================================================================================================
+			//@Test(priority=30)
+			public static void verify_check_device_action_scan()throws Throwable{
+			Result=Devices.check_device_action_scan();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+
+//==========================================================================================================
+			//@Test(priority=31)
+			public static void verify_check_device_action_broadcast_message()throws Throwable{
+			Result=Devices.check_device_action_broadcast_message();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
 	
+//==========================================================================================================
+			@Test(priority=32)
+			public static void verify_check_device_action_enabling_call_sms()throws Throwable{
+			Result=Devices.check_device_action_enabling_call_sms();
+			Assert.assertEquals(Result, "ok");
+				
+			}
+			
+//==========================================================================================================
+			//@Test(priority=33)
+			public static void verify_check_device_action_disabling_call_sms()throws Throwable{
+			Result=Devices.check_device_action_disabling_call_sms();
+			Assert.assertEquals(Result, "ok");
+				
+			}
+			
+			
+//==========================================================================================================
+			//@Test(priority=34)
+			public static void verify_check_device_move_to_group()throws Throwable{
+			Result=Devices.check_device_move_to_group();
+			Assert.assertEquals(Result, "ok");
+			}
+			
+			
+			
+//==========================================================================================================
+			//@Test(priority=35)
+			public static void verify_check_device_apply_configuration_antitheft()throws Throwable{
+			Result=Devices.check_device_apply_configuration_antitheft();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+	
+			
+//==========================================================================================================
+			//@Test(priority=36)
+			public static void verify_check_device_apply_configuration_websecurity()throws Throwable{
+			Result=Devices.check_device_apply_configuration_websecurity();
+			Assert.assertEquals(Result, "ok");
+				
+			}
+			
+//==========================================================================================================
+			//@Test(priority=37)
+			public static void verify_check_device_apply_configuration_wifi()throws Throwable{
+			Result=Devices.check_device_apply_configuration_wifi();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+	
+//==========================================================================================================
+			//@Test(priority=38)
+			public static void verify_check_device_apply_configuration_schedule_scan()throws Throwable{
+			Result=Devices.check_device_apply_configuration_schedule_scan();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+	
+//==========================================================================================================
+			//@Test(priority=39)
+			public static void verify_check_device_apply_configuration_app_configuration()throws Throwable{
+			Result=Devices.check_device_apply_configuration_app_configuration();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+			
+//==========================================================================================================
+			//@Test(priority=40)
+			public static void verify_check_device_apply_configuration_network_usage()throws Throwable{
+			Result=Devices.check_device_apply_configuration_network_usage();
+			Assert.assertEquals(Result, "ok");
+				
+			}	
+			
+//==========================================================================================================
+			//@Test(priority=41)
+			public static void verify_check_device_locate_on_map()throws Throwable{
+			Result=Devices.check_device_locate_on_map();
+			Assert.assertEquals(Result, "ok");
+				
+			}	
+	
+//==========================================================================================================
+			@Test(priority=42)
+			public static void verify_check_search_command_policy_config_on_activity_tab()throws Throwable{
+			Result=Devices.check_search_command_policy_config_on_activity_tab();
+			Assert.assertEquals(Result, "ok");
+				
+			}		
+			
+			
+			
 	}

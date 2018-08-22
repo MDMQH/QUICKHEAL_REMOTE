@@ -79,5 +79,86 @@ public class Constants {
     public static String CUSTOM_APP_UPLOAD_FILE_APK_NAME="vidmate.apk";
 	
     public static String Test_Data_Sheet_Network_Usage= "Nw Config";
-			
+    
+    //Rajat goyal
+    
+    public static String Activity_Tab_Call_SMS_Enable_Text="Enable Call/SMS logs Monitoring";
+    
+    public static String Activity_Tab_Call_SMS_Disable_Text="Disable Call/SMS logs Monitoring";
+    
+    public static String Device_Sync_Command_Success_Text="Device Sync command submitted successfully.";
+    
+    public static String Device_drpdown_action="Device actions";
+    
+    public static String Device_action_drpdown_sync="Sync";
+    
+    public static String Device_action_drpdown_locate="Locate";
+    
+    public static String Device_action_locate_Success_notification="Device Locate command submitted successfully.";
+	
+    public static String Device_action_trace_on="Trace On";
+    
+    public static String Device_trace_on_success_Notfication="Continuous Trace On command submitted successfully.";
+    
+    public static String Device_action_trace_off="Trace Off";
+    
+    public static String Device_trace_off_success_Notifcation="Continuous Trace Off command submitted successfully.";
+    
+    public static String Device_action_scan="Scan";
+    
+    public static String Device_action_scan_success_notification="Device Scan command submitted successfully.";
+    
+    public static String Device_action_boradcast_message="Broadcast Message";
+    
+    public static String Device_action_boradcast_text="This is sample test for testing";
+    
+    public static String Device_broadcast_message_success_notification="Command to Broadcast the message sent successfully.";
+    
+    public static String Device_enabling_call_sms="Call/SMS Monitoring ON";
+    
+    public static String Device_disabling_call_sms="Call/SMS Monitoring OFF";
+    
+    public static String Device_move_to_group="Move to group";
+    
+    public static String Device_moveto_group_default_group="Default Group";
+    
+    public static String Device_moveto_group_success_notification="Device(s) moved to group successfully.";
+    
+    public static String Device_moveto_group_automation="Automation Group";
+    
+    public static String Device_apply_configuration="Apply Configuration";
+    
+    public static String Device_apply_configuration_antitheft="Anti-Theft";
+    
+    public static String Device_apply_configuration_antitheft_value="Default antitheft setting";
+    
+    public static String Device_apply_configuration_antitheft_success_message="Configuration(s) Assigned successfully.";
+    
+    public static String Device_apply_configuration_websecurity="Web Security";
+    
+    public static String Device_apply_configuration_websecurity_value="Default Web Security Setting";
+    
+    public static String Device_apply_configuration_wifi="Wi-Fi";
+    
+    public static String Device_apply_configuration_wifi_value="Automation Wifi Configuration";
+    
+    public static String Device_apply_configuration_schedule_scan="Schedule Scan";
+    
+    public static String Device_apply_configuration_schedule_scan_value="Automation Test Scan Configuration Twenty";
+    
+    public static String Device_apply_configuration_app_configuration="App configuration";
+    
+    public static String Device_apply_configuration_app_configuration_value="Default App Configuration";
+    
+    public static String Device_apply_configuration_network_usage="Network Usage";
+    
+    public static String Device_apply_configuration_network_usage_value="AutomationNetworkUsageConfigration"; 
+    
+    public static String Device_locate_on_map="Locate on Map";
+    
+    public static String Device_search_push_config_text="Push Fence Configuration";
+    
+    public static String Device_search_push_policy_text="Push Policy";
+    
+    
 }
