@@ -347,7 +347,7 @@ public class DevicesTest extends Setup {
 			}			
 	
 //==========================================================================================================
-			@Test(priority=32)
+			//@Test(priority=32)
 			public static void verify_check_device_action_enabling_call_sms()throws Throwable{
 			Result=Devices.check_device_action_enabling_call_sms();
 			Assert.assertEquals(Result, "ok");
@@ -430,12 +430,22 @@ public class DevicesTest extends Setup {
 			}	
 	
 //==========================================================================================================
-			@Test(priority=42)
+			//@Test(priority=42)
 			public static void verify_check_search_command_policy_config_on_activity_tab()throws Throwable{
 			Result=Devices.check_search_command_policy_config_on_activity_tab();
 			Assert.assertEquals(Result, "ok");
 				
-			}		
+			}	
+			
+//==========================================================================================================
+			//@Test(priority=43)
+			public static void verify_check_activity_tab_compliance_report()throws Throwable{
+			Result=Devices.check_activity_tab_compliance_report();
+			Assert.assertEquals(Result, "ok");
+				
+			}			
+
+
 			
 			
 			

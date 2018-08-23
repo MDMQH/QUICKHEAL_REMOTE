@@ -330,7 +330,7 @@ SAVE_BUTTON_AFTER_ASSIGNING_ADMIN_ACCESS_TO_USER=id:userDetails_adminAccess_save
 
 CLICKED_ON_USER_ROLE_WHILE_ASSIGNING_ADMIN_ACCESS=id:s2id_userDetails-userRoleSelect
 
-USER_ROLE_DROPDOWN_LIST=xpath:.//*[@id='select2-results-7']/li
+USER_ROLE_DROPDOWN_LIST=xpath:.//*[@id='select2-results-6']/li
 
 USER_FIRST_CHEKCBOX=xpath://tr[@role='row' and @class='odd selectable']
 
@@ -566,6 +566,10 @@ EDIT_DEVICE_CONFIGURATION_TAB=id:configuration_edit_li
 			
 EDIT_DEVICE_WIFI_CONFIGURATION_OUTSIDE=id:device_edit_li
 
+DEVICE_FILTER_COLUMNS_BY_DEVICENAME=xpath:.//th[contains(text(),'Device Name')]
+
+DEVICE_FILTER_COLUMNS_BY_GROUP=xpath:.//tr//th[4]
+
 #Rajat
 EDIT_DEVICE_WIFI_CONFIGURATION=id:s2id_wifiConfSelect
 
@@ -654,6 +658,8 @@ DEVICE_ADD_APP_URL_BOX=xpath://input[@id='play-store-form-app-path']
 
 DEVICE_ADD_APP_POPUP_SUBMIT_BUTTON=xpath://button[@id='play-store-save-btn']
 
+
+
 #Rajat 16 Aug
 
 DEVICE_CALL_SMS_LOGS_TAB=xpath://ul[@id='tabs']/li[6]
@@ -736,8 +742,9 @@ DEVICE_APPLYCONFIG_NETWORK_USAGE_DRPDWN_VALUE=xpath://div[@class='dropdown-menu 
 
 DEVICE_SEARCH_ACTIVITY_SEARCH_BOX=xpath://input[@class='form-control' and @aria-controls='activityTable']
 
+DEVICE_ACTIVITY_STATUS_COMPLIANCE_REPORT=xpath://ul[@class='activeSideTab sidetab_ul']/li[2]
 
-
+DEVICE_ACTIVITY_STATUS_COMPLIANCE_FIRST_ELEMENT_TEXT=xpath://table[@role="grid"]/tbody/tr[1]/td/div[2]/span/b
 
 
 
@@ -1936,18 +1943,45 @@ FENCE_CONFIGURATION_SAVE_BUTTON=id:saveFenceConfigBtn
 
 
 # ===================================================================================================================================
-#				            				UserRole Configuration Module
+#	UserRole Configuration Module
 # ===================================================================================================================================
 
 ADD_USERROLE_BUTTON=linktext:Add
 
 USERROLENAME_TEXTFIELD=id:userRoleName
 
-DROPDOWN_SELECT_USERROLES=xpath://a[@class='select2-choice select2-default']//span[2]
+DROPDOWN_SELECT_USERROLES_BTN=xpath://a[@class='select2-choice select2-default']//span[2]
 
 DROPDOWN_LIST_USERROLES=xpath:.//*[@id='select2-results-2']//li
 
 SAVE_USERROLE_BUTTON=id:userRoleDetails_Save
+
+USERROLE_SEARCH_LBL=xpath://*[@id="dt-userRole-list_filter"]/div[1]/input
+
+USERROLENAME_VERIFY=xpath://table[@id='dt-userRole-list']/tbody/tr/td[3]
+
+
+USERROLE_EDIT_INHERIT_DROPDOWN_BTN=xpath://span[@id='select2-chosen-2']
+
+USERROLE_EDIT_INHERIT_DROPDOWN=xpath://ul[@id='select2-results-2']/li
+
+USERROLE_EDIT_CRITICAL_ACTION_ON_BTN=xpath://div[@id="toggleDiv_75_test"]/div/span[1]
+
+USERROLE_EDIT_CRITICAL_ACTION_OFF_BTN=xpath://*[@id="toggleDiv_75_test"]/div/span[2]
+
+USERROLE_EDIT_CREATE_TOGGLE_ON_BTN=xpath://div[@id="toggleDiv_2_test"]/div/span[1]
+
+USERROLE_EDIT_CREATE_TOGGLE_OFF_BTN=xpath://div[@id="toggleDiv_2_test"]/div/span[2]
+
+USERROLE_EDIT_SAVE_BTN=id:userRoleDetails_Save
+
+USERROLE_TYPE_VALIDATE_LBL=xpath://*[@id="userRoleDetails_basicInfo"]/ul/li[3]/span[2]
+
+USERROLE_EDIT_USERS_TAB=xpath://a[@href='#tab2-1']
+
+USERROLE_EDIT_USERS_CHECKBOX=xpath://table[@id='DataTables_Table_0']/tbody/tr/td[3]
+
+USERROLE_EDIT_USERS_REMOVE_BTN=id:userRoleDetails_removeusrBtn
 
 
 
@@ -2084,6 +2118,97 @@ GROUP_SELECT_POLICY_FROM_DROPDWN=xpath:.//ul[@id='select2-results-1']/li
 
 GROUP_MANAGE_DEVICES=xpath:.//a[@class='glyphicons iphone leftSubMenu']//span[contains(text(),'Devices')]
 
+#Lavina
+GROUP_NAME_EDIT_LABEL=id:devicegroup_name
+
+GROUP_NAME_EDIT_SAVE_BTN=id:devicegroupDtls_editDevicegroupInfoBtn
+
+GROUP_SEARCH_BY_NAME=xpath:.//*[@id="dt-deviceGroup-list"]/tbody/tr/td[3]
+
+GROUP_SEARCH_BY_ASSIGNED_POLICY=xpath:.//*[@id="dt-deviceGroup-list"]/tbody/tr/td[5]
+
+
+GROUP_ADVANCE_SEARCH_POLICY_DRPDWN_BTN=id:s2id_policy-dropdown
+
+GROUP_ADVANCE_SEARCH_CREATED_DRPDWN_BTN=id:s2id_createdby-dropdown
+
+GROUP_ADVANCE_SEARCH_BTN_AFTER_DRPDWN=xpath:.//button[@id='advancedSearchBtn']
+
+GROUP_ADVANCE_SEARCH_LBL=xpath:.//div[@id='dt-deviceGroup-list_info']
+
+GROUP_FILTER_COLUMN_BY_ID=xpath:.//html/body/div[12]/button[1]
+
+GROUP_FILTER_COLUMN_BY_No_of_Devices=xpath:./html/body/div[8]/button[2]/span/span[2]
+
+GROUP_FILTER_COLUMN_BY_ID_CHECK=xpath:.//th[@class='sorting' and contains(text(),'Id')]
+
+GROUP_FILTER_COLUMN_BY_No_of_Devices_CHECK=xpath:.//th[@class='sorting' and contains(text(),'No. of Devices')]
+
+GROUP_FILTER_COLUMN_BY_Group_Name=xpath:.//th[@class='sorting' and contains(text(),'Group Name')]
+
+GROUP_ACTION_DROPDOWN=xpath:.//div[@class='dropdown-menu open']/ul/li
+
+GROUP_ACTION_SELECT_DROPDOWN_SUBMIT_BTN=xpath:.//button[@id='devicegroup-action-submit-btn']
+
+GROUP_ASSIGNED_POLICY=xpath:.//span[@id='devicegroupDtls_appliedPolicy_span']
+
+GROUP_ASSIGNED_FENCE_CONFIG=xpath:.//span[@id='devicegroupDtls_appliedFenceConfiguration_span']
+
+GROUP_BROADCAST_MSG_LBL=xpath:.//textarea[@id='broadcastMessage']
+
+GROUP_BROADCAST_MSG_TYPE=xpath:.//span[@id='select2-chosen-3']
+
+GROUP_BROADCAST_MSG_DROPDOWN=xpath:.//ul[@id='select2-results-3']/li
+
+GROUP_BROADCAST_MSG_BTN=xpath:.//button[@id='broadcast-msg-submit-btn']
+
+GROUP_BROADCAST_MSG_NOTIFICATION=xpath:.//ul[@id='notyfy_container_top']
+
+GROUP_DETAILPAGE_EDIT_FENCE_CONFIG_DROPDOWN_BTN=xpath:.//span[@id='select2-chosen-2']
+
+GROUP_SELECT_FENCE_CONFIG_FROM_DROPDWN=xpath:.//ul[@id='select2-results-2']/li
+
+GROUP_ASSIGNED_FENCE_CONFIG_AFTER_SEARCH=xpath:.//*[@id="dt-deviceGroup-list"]/tbody/tr/td[6]
+
+GROUP_EDIT_DEVICES_TAB=xpath:.//a[@href='#tab2-1']
+
+GROUP_ADD_DEVICE_BTN=id:devicegroupDtls_allDeviceModaL
+
+GROUP_ADD_DEVICE_SEARCH_LBL_POPUP=xpath:.//*[@id="DataTables_Table_0_filter"]/div[1]/input
+
+GROUP_ADD_DEVICE_CHECKBOX_POPUP=xpath:.//*[@id="DataTables_Table_0"]/tbody/tr/td[2]
+
+GROUP_ADD_DEVICES_BTN_POPUP=id:devicegroupDtls_adddeviceToDGrp_Btn
+
+GROUP_EDIT_QRCODE_TAB=xpath:.//a[@class='glyphicons qrcode']
+
+GROUP_EDIT_QRCODE_CHECKBOX_CHECKED=xpath:.//div[@id='uniform-generateCommonQRCodeChk']/span[@class='checked']
+
+GROUP_EDIT_QRCODE_CHECKBOX_UNCHECKED=xpath:.//*[@id="uniform-generateCommonQRCodeChk"]/span
+
+
+GROUP_EDIT_QRCODE_ASSIGN_OWNER_BTN=xpath:.//span[@id='changeGrpOwnerSpan']
+
+GROUP_EDIT_QRCODE_ASSIGN_OWNER=xpath:.//table[@id='DataTables_Table_0']/tbody/tr/td[3]
+
+
+GROUP_EDIT_QRCODE_VALIDITY_DROPDWN_BTN=xpath:.//span[@id='select2-chosen-4']
+
+GROUP_EDIT_QRCODE_VALIDITY_FROM_DROPDWN=xpath:.//ul[@id='select2-results-4']/li
+
+GROUP_EDIT_GENERATE_QRCODE_BTN=id:generateQRCodeBtn
+
+GROUP_EDIT_GENERATE_QRCODE_EXPIRED=xpath:.//span[@class='category fontClrRed']
+
+GROUP_EDIT_UPDATE_QRCODE_BTN=id:updateQRCodeBtn
+
+GROUP_EDIT_QRCODE_VALIDITY_DROPDWN_BTN_UPDATED=id:select2-chosen-5
+
+GROUP_EDIT_QRCODE_VALIDITY_FROM_DROPDWN_UPDATED=xpath:.//ul[@id='select2-results-5']/li
+
+GROUP_EDIT_QRCODE_PRESENCE=xpath:.//div[@id='code']/canvas
+
+GROUP_EDIT_QRCODE_GROUP_NAME_VERIFY=id:device-group-name
 
 
 

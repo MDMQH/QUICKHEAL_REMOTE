@@ -1895,16 +1895,138 @@ public class Devices extends Setup {
 				try {
 					Assert.assertEquals(Constants.Device_search_push_policy_text , policy_txt);
 					Log.info("Push Policy notification verified");
-				}catch(Exception  ex) {
+				}
+				
+				catch(Exception  ex) {
 				   Log.info("Push Policy notification is not verified");	
 				}
 				
-				
-				
-			    return "ok";
+				return "ok";
 				
 			}
 			
+			//=====================================================================================================			
+
+			public static String check_activity_tab_compliance_report() throws Throwable {
+				MDM.login();
+				Thread.sleep(2000);
+				Log.info("User Login Successfully");
+				MDM.gotoDevices();
+				MDM.searchOnListPage("One plus three");
+				Thread.sleep(1000);
+				OR.is_element_present("EDIT_DEVICE_ON_LIST_PAGE").click();
+				Thread.sleep(2000);
+				OR.is_element_present("DEVICE_ACTIVITY_STATUS_TAB").click();
+				Thread.sleep(3000);
+				OR.is_element_present("DEVICE_ACTIVITY_STATUS_COMPLIANCE_REPORT").click();
+				Thread.sleep(2000);
+				String activity_text = OR.is_element_present("DEVICE_ACTIVITY_STATUS_COMPLIANCE_FIRST_ELEMENT_TEXT").getText();
+				System.out.println(activity_text);
+				if(activity_text.equals(Constants.Device_activity_tab_compliance_report_non_compliant_device)) {
+					Assert.assertEquals(Constants.Device_activity_tab_compliance_report_non_compliant_device, activity_text);	
+					Log.info("Device is non compliant and verified successfully");
+				}
+			      else if(activity_text.equals(Constants.Device_activity_tab_compliance_report_compliant_device)){
+				Assert.assertEquals(Constants.Device_activity_tab_compliance_report_compliant_device, activity_text);
+				Log.info("Device is compliant and verified successfully");
+			}else {
+				
+				Log.info("There is no compliance report found");
+				Assert.assertEquals(true, false);
+			}
+
+
+				return "ok";
+			}
+			
+			
+			// =======================================================================================================================================
+			/**
+			* @author Lavina Jain This method verifies the import DEVICE functionality
+			*/
+			public static String check_import_device() throws Exception {
+
+			MDM.login();
+			Thread.sleep(2000);
+			MDM.gotoDevices();
+			OR.is_element_present("IMPORT_USERS_BUTTON").click();
+			Log.info("clicked IMPORT_USERS_BUTTON");
+
+			// Actions actions = new Actions(driver);
+			// actions.moveToElement(OR.is_element_present("IMPORT_USERS_SELECT_FILE_LBL")).sendKeys(Constants.Test_Data_Excel_Dir_Path+Constants.Test_Data_CSV_File).build().perform();
+			// OR.is_element_present("IMPORT_USERS_SELECT_FILE_LBL").sendKeys(Constants.Test_Data_Excel_Dir_Path+Constants.Test_Data_CSV_File);
+			// Log.info("IMPORT_USERS csv file to be uploaded");
+			System.out.println(Constants.Test_Data_Excel_Dir_Path);
+			System.out.println(Constants.Test_Data_Device_CSV_File);
+			System.out.println(Constants.Test_Data_Excel_Dir_Path + Constants.Test_Data_Device_CSV_File);
+			Thread.sleep(4000);
+			// OR.is_element_present("IMPORT_USERS_SELECT_FILE_BTN").click();
+			OR.is_element_present("IMPORT_USERS_SELECT_FILE_LBL").click();
+			Log.info("Retrieving data from clipboard");
+			Thread.sleep(2000);
+			CommonUtils.get_file_from_testdata(Constants.Test_Data_Excel_Dir_Path, Constants.Test_Data_Device_CSV_File);
+			// CommonUtils.get_file_from_testdata();
+			Thread.sleep(2000);
+			OR.is_element_present("IMPORT_USERS_FILE_IMPORT_BTN").click();
+			Log.info("IMPORT_Devices csv file uploaded ");
+			Thread.sleep(3000);
+			// OR.is_element_present("IMPORT_USERS_NOTIFICATION_TAB").click();
+			OR.hoverOnElement("IMPORT_USERS_NOTIFICATION_TAB");
+			Log.info("IMPORT_USERS_NOTIFICATION_TAB clicked");
+			Thread.sleep(2000);
+			String s = OR.is_element_present("IMPORT_USERS_CHECK_FILE_IMPORT").getText();
+			Log.info("Import message is :" + s);
+			Assert.assertEquals(s, "Device import is Completed. Download Output File.");
+			return "ok";
+			}		
+			
+			
+			// =======================================================================================================================================
+			/**
+			* @author Lavina Jain This method verifies the Filter Column by
+			* selecting/deselecting columns.
+			*/
+			public static String check_filter_column() throws Exception {
+			try {
+			MDM.login();
+			Thread.sleep(2000);
+			MDM.gotoDevices();
+			OR.is_element_present("USERS_FILTER_COLUMNS").click();
+			Log.info("USERS_FILTER_COLUMNS clicked");
+			// by unchecking all checkboxes
+
+			Thread.sleep(2000);
+			OR.is_element_present("USERS_FILTER_COLUMNS_BY_ID").click();
+			Log.info("USERS_FILTER_COLUMNS_BY_ID clicked");
+			Thread.sleep(2000);
+			OR.is_element_present("USERS_FILTER_COLUMNS_BY_DEPARTMENT").click();
+			Log.info("USERS_FILTER_COLUMNS_BY_DEPARTMENT clicked");
+			Thread.sleep(2000);
+			OR.is_element_present("USERS_FILTER_COLUMNS_BY_EMAIL").click();
+			Log.info("USERS_FILTER_COLUMNS_BY_EMAIL clicked");
+			Thread.sleep(2000);
+			OR.is_element_present("USERS_FILTER_COLUMNS_BY_MOB").click();
+			Log.info("USERS_FILTER_COLUMNS_BY_MOB clicked");
+			Thread.sleep(1000);
+			// OR.is_element_present("USERS_FILTER_COLUMNS").click();
+			OR.is_element_present("USERS_FILTER_COLUMNS_OUTSIDE").click();
+			Thread.sleep(2000);
+			String dname = OR.is_element_present("DEVICE_FILTER_COLUMNS_BY_DEVICENAME").getText();
+			Log.info("MATCHING DEVICE NAME");
+			Assert.assertEquals(dname, "Device Name");
+
+			String group = OR.is_element_present("DEVICE_FILTER_COLUMNS_BY_GROUP").getText();
+			Log.info("MATCHING group");
+			Assert.assertEquals(group, "Group");
+
+
+			Log.info("column Values successfully verified ");
+			} catch (Exception e) {
+			e.printStackTrace();
+			}
+
+			return "ok";
+			}	
 			
 			
 }

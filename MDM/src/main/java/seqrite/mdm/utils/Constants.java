@@ -80,6 +80,12 @@ public class Constants {
 	
     public static String Test_Data_Sheet_Network_Usage= "Nw Config";
     
+    public static String Test_Data_Device_CSV_File = "Devices.csv";
+    
+    public static String Test_Data_Sheet_User_Roles= "UserRole";
+    
+    public static String Test_Data_Group_CSV_File = "Groups.csv";
+    
     //Rajat goyal
     
     public static String Activity_Tab_Call_SMS_Enable_Text="Enable Call/SMS logs Monitoring";
@@ -160,5 +166,8 @@ public class Constants {
     
     public static String Device_search_push_policy_text="Push Policy";
     
+    public static String Device_activity_tab_compliance_report_non_compliant_device="Demo Non-KNOX One Plus Three is non-compliant";
     
+    public static String Device_activity_tab_compliance_report_compliant_device="Demo Non-KNOX One Plus Three is compliant";
+   
 }

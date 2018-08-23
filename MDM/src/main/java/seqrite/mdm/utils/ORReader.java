@@ -359,7 +359,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 				actions.moveToElement(element).build().perform();
 
 			}
-	
+			//==========================================================================================================================
+
+			/**
+			* @author Pooja Ainarkar
+			* This method identifies the new pop up window and performs action on it.
+			*/
+
+			public void popuphandle(String strElement,String value) throws Exception {
+			Actions act=new Actions(driver);
+			WebElement ele=is_element_present(strElement);
+			act.moveToElement(ele);
+			act.click();
+			act.sendKeys(value);
+			act.build().perform();
+			}	
 	
 	
 	
